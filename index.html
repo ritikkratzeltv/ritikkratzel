@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ritik Kratzel</title>
     <link href="https://hovertree.com/texiao/html5/index/hovertreewelcome.css" type="text/css" rel="stylesheet" />
     <style>
         body {
             color: white;
         }
-        .themes{
+
+        .themes {
             background-color: black;
         }
 
@@ -197,6 +198,12 @@
             background-color: #08FDD8;
             color: black;
         }
+        .profile{
+            position: relative;
+        }
+        .profile img{
+            width: 25vw;
+        }
 
         @keyframes colorFlow {
             0% {
@@ -235,7 +242,7 @@
             <input type="checkbox" id="music-toggle">
         </div>
 
-        <audio id="background-music" loop>
+        <audio id="background-music" loop >
             <source src="music.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -279,30 +286,8 @@
     </div>
     <script type="text/javascript" src="https://hovertree.com/texiao/html5/index/hovertreewelcome.js">
     </script>
-    <script src="java.js"></script>
-    <script>
-        // Get the audio element
-        const audio = document.getElementById("background-music");
-
-        // Get the music toggle switch
-        const musicToggle = document.getElementById("music-toggle");
-
-        // Function to toggle music play/pause
-        function toggleMusic() {
-            if (musicToggle.checked) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
-        }
-
-        // Add event listener to the music toggle switch
-        musicToggle.addEventListener("change", toggleMusic);
-
-
-
-
-    </script>
+<script src="java.js"></script>
+<script src="audio.js"></script>
     <script>
         // Get the theme toggle switch
         const themeToggle = document.getElementById("theme-toggle");
