@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Kratzel</title>
-    <link href="https://hovertree.com/texiao/html5/index/hovertreewelcome.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
     <style>
         body {
             color: white;
-        }
-
-        .themes {
+            overflow-x: hidden;
+            margin: 0;
             background-color: black;
         }
 
@@ -20,6 +18,20 @@
             position: relative;
             display: flex;
             gap: 40vw;
+        }
+
+        .sticky-controls {
+            position: sticky;
+            top: 0;
+            padding: 10px;
+            z-index: 105;
+        }
+
+        .sticky-header {
+            position: fixed;
+            top: 2vw;
+            width: 100%;
+            z-index: 102;
         }
 
         .logo {
@@ -47,33 +59,20 @@
         .nav li a {
             color: white;
             text-decoration: none;
-            background: linear-gradient(to right, #08FDD8, #9C8CB9, rgb(171, 255, 194), rgb(63, 121, 224), #E6F2FF, white);
-            background-size: 500% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: flow 5s linear infinite;
-            border: 5px solid transparent;
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
         }
 
-        @keyframes flow {
-            0% {
-                background-position: 0 0;
-            }
-
-            100% {
-                background-position: 100% 0;
-            }
+        .underline {
+            text-decoration: underline;
         }
 
-        .nav li :hover {
-            color: wheat;
+        .content {
+            position: relative;
+            top: 10vw;
         }
 
         .adios {
             position: absolute;
-            left: 1vw;
+            right: 10vw;
             z-index: 2;
         }
 
@@ -83,47 +82,14 @@
             margin-top: 10px;
         }
 
-        label[for="music-toggle"] {
+        label[for="music-toggle"],
+        label[for="theme-toggle"] {
             font-size: 1.2vw;
             margin-right: 10px;
             font-family: 'Courier New', Courier, monospace;
         }
 
-        #music-toggle {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 40px;
-            height: 20px;
-            background: #333;
-            border-radius: 20px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        #music-toggle::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #08FDD8;
-            /* Color when music is on */
-            transition: 0.2s;
-        }
-
-        #music-toggle:checked::before {
-            transform: translateX(20px);
-            background: #F00;
-            /* Color when music is off */
-        }
-
-        .theme {
-            position: absolute;
-            right: 1vw;
-            top: 1vw;
-            z-index: 2;
-        }
-
+        #music-toggle,
         #theme-toggle {
             -webkit-appearance: none;
             appearance: none;
@@ -135,6 +101,7 @@
             cursor: pointer;
         }
 
+        #music-toggle::before,
         #theme-toggle::before {
             content: "";
             position: absolute;
@@ -142,172 +109,1357 @@
             height: 20px;
             border-radius: 50%;
             background: #08FDD8;
-            /* Color when theme is light */
             transition: 0.2s;
         }
 
+        #music-toggle:checked::before,
         #theme-toggle:checked::before {
             transform: translateX(20px);
             background: #F00;
-            /* Color when theme is dark */
         }
 
-        .first {
+        .theme {
+            position: absolute;
+            right: 1vw;
+            top: 1vw;
+            z-index: 2;
+        }
+
+
+
+
+        .knowledge {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10vw;
+            justify-content: space-around;
+            margin: 4vw 0;
+            align-items: center;
+        }
+
+        .introduction {
+            width: 42vw;
+            font-family: Songti SC;
+
+
+        }
+
+        .introduction h1 {
+            font-size: 2vw;
+        }
+
+        .introduction h2 {
+            font-size: 1.2vw;
+        }
+
+        .hcj {
+            text-align: center;
+            position: relative;
+            margin: 1vw 10vw;
+            font-size: 1vw;
+        }
+
+        .skills {
+            width: 42vw;
+            font-family: Songti SC;
+        }
+
+        .skills h1 {
+            font-size: 2vw;
+        }
+
+        .skills h2 {
+            font-size: 1.2vw;
+        }
+
+        .portimg {
+            position: relative;
+        }
+
+        .portimg img {
+            width: 30vw;
+        }
+
+        #portimg1 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #portimg2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .game {
+            position: relative;
+        }
+
+        .cell {
+            width: 6vw;
+            height: 6vw;
+            border: 1px solid;
+            border-radius: 0.3vw;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1vw;
+            position: relative;
+        }
+
+        #field {
+            position: relative;
+            text-align: center;
+        }
+
+        #scramble-button {
+            text-align: center;
+            position: relative;
+            margin: 1vw 10vw;
+            font-size: 1vw;
+        }
+
+        #win {
+            text-align: center;
+            font-size: 2vw;
+            font-weight: bold;
+            display: none;
+            color: red;
+            background-color: #08FDD8;
+        }
+
+        .projects {
+            position: relative;
+            font-family: Songti SC;
+            ;
+            text-align: center;
+            margin: 8vw 0;
+        }
+
+        .projects h1 {
+            font-size: 3vw;
+        }
+
+        .projects h2 {
+            font-size: 1.2vw;
+        }
+
+        .previous {
             position: relative;
             display: flex;
             justify-content: space-around;
-            margin: 5vw 0;
         }
 
-        .intro {
+        .work {
             position: relative;
+        }
+
+        .work img {
+            position: relative;
+            width: 10vw;
+        }
+
+        .work p {
+            position: relative;
+
+        }
+
+        .work a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2vw;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .experience {
+            position: relative;
+            font-size: 1.6vw;
+            margin: 2vw 4vw;
+            text-align: center;
+            font-family: Songti SC
+        }
+
+        .experience h1 {
+            font-size: 3vw
+        }
+
+        .experience h2 {
+            font-size: 1.2vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about {
+            position: relative;
+            text-align: center;
+            font-family: Songti SC;
+        }
+
+        .about h1 {
+            font-size: 4vw;
+        }
+
+        .about h2 {
             font-size: 2vw;
-            font-family: Inconsolata, monospace;
-            font-weight: 700;
+            position: relative;
+            top: -15vw;
+            text-align: left;
+            left: 3vw;
+        }
+
+        .about h3 {
+            position: relative;
+            top: -15vw;
+            text-align: left;
+            left: 3vw;
+            background-color: cadetblue;
+            padding: 1vw;
+            width: 9vw;
+            border-radius: 2px;
+        }
+
+        #about {
+            margin: 8vw 0;
+            padding-top: 5vw;
+        }
+
+        .hobby {
+            position: relative;
+            text-align: center;
+            top: -10vw;
+            margin: 0 33vw;
+        }
+
+        .hobby h4 {
+            position: relative;
+            width: 40vw;
+        }
+
+
+
+        .snow_wrap {
+            height: 69vw;
+            width: 100%;
+            overflow: hidden;
+            background-image: url(snow.JPG);
+            position: relative;
+            background-size: cover;
+        }
+
+        .snow {
+            display: none;
+        }
+
+        .snow,
+        .snow:before,
+        .snow:after {
+            position: absolute;
+            top: -650px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image:
+                radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+                radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+                radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent),
+                radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent),
+                radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent),
+                radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent),
+                radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent),
+                radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent),
+                radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+            background-size: 650px 650px;
+            animation: snow 3s linear infinite;
+            content: "";
+        }
+
+        .snow:after {
+            margin-left: -250px;
+            opacity: 0.5;
+            filter: blur(2px);
+            animation-duration: 6s;
+            animation-direction: reverse;
+        }
+
+        .snow:before {
+            margin-left: -350px;
+            opacity: 0.7;
+            filter: blur(1px);
+            animation-duration: 9s;
+            animation-direction: reverse;
+        }
+
+        @keyframes snow {
+            to {
+                transform: translateY(650px);
+            }
+        }
+
+
+        .me {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .bio {
+            position: relative;
+            display: flex;
+            margin: 3vw 10vw;
+            gap: 15vw;
+            align-items: center;
+        }
+
+        .bio h1 {
+            position: relative;
+
+        }
+
+        .bio img {
+            width: 25vw;
+            height: auto;
+        }
+
+        .graphy {
+            position: relative;
+        }
+
+        .graphy h1 {
+            font-size: 1.8vw;
+        }
+
+        .graphy p {
+            font-size: 1.5vw;
+            font-family: Songti SC;
+        }
+
+        .gimg {
+            position: relative;
+        }
+
+
+        .video {
+            width: 2000%;
+            /* Increase the size by 30% */
+            height: auto;
+            display: none;
+            /* Hide the video initially */
+        }
+
+        .gimg:hover .video {
+            display: block;
+            /* Display the video on hover */
+        }
+
+
+
+
+        .contact {
+            position: relative;
+            text-align: center;
+            font-family: Songti SC;
+            margin: 7vw 0;
+        }
+
+        .contact h1 {
+            font-size: 4vw;
+            margin: 0 4vw;
+        }
+
+        .contact p {
+            font-size: 1.8vw;
+            margin: 0 4vw;
+        }
+
+        .form {
+            text-align: center;
+            font-size: 2vw;
+            font-family: "Songti SC", sans-serif;
+            padding: 1vw 2.5vw;
+            border-radius: 1vw;
+            border: 1px solid white;
+            margin: 3vw 0;
+        }
+
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 2vw 0;
         }
 
-        .intro p {
-            font-size: 1.7vw;
-            margin: 0.3vw 0 0;
-            font-family: Inconsolata, monospace;
-
+        .form {
+            text-align: center;
+            font-size: 2vw;
+            font-family: "Songti SC", sans-serif;
+            padding: 3vw 0;
+            border-radius: 1vw;
+            border: 1px solid white;
+            margin: 3vw 15vw;
+            /* Add a 3vw margin to create a gap */
         }
 
-        .duction {
-            position: relative;
-            width: 30vw;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.1vw;
-            margin: 1vw 0;
-
+        .contact-form label {
+            display: block;
+            font-size: 1.5vw;
+            margin-bottom: 0.4vw;
         }
 
-        .duction a {
-            position: relative;
-            font-size: 1.2vw;
-            color: #08FDD8;
-            border: 1px solid #08FDD8;
-            padding: 0.8vw;
-            top: 2vw;
-            animation: colorFlow 5s ease-in-out infinite;
-
-        }
-
-        .duction a:hover {
-            background-color: #08FDD8;
-            color: black;
-        }
-        .profile{
-            position: relative;
-        }
-        .profile img{
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
             width: 25vw;
+            font-size: 1.5vw;
+            border: 1px solid #ccc;
+            border-radius: 0.5vw;
+            margin-bottom: 1vw;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
-        @keyframes colorFlow {
-            0% {
-                border-color: #08FDD8;
-                /* turquoise */
+        .contact-form textarea {
+            height: 7vw;
+            resize: vertical;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #8ac6e9;
+            color: white;
+            border: none;
+            padding: 0.5vw 1vw;
+            font-size: 1.5vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #66a9d0;
+        }
+
+
+        /* Your existing CSS styles */
+        /* ... */
+
+        /* Additional styles for the updated layout */
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2vw 0;
+        }
+
+        .blog {
+            position: relative;
+            text-align: center;
+            font-family: Songti SC;
+            margin: 5vw 0;
+        }
+
+        .blog h1 {
+            font-size: 4vw;
+            margin: 0;
+        }
+
+        .blog p {
+            font-size: 1.8vw;
+            margin: 0 4vw;
+        }
+
+        @media (max-width: 650px) {
+
+            .header {
+                gap: 30vw;
             }
 
-            25% {
-                border-color: #F7B32B;
-                /* gold */
+            .nav {
+                justify-content: space-between;
             }
 
-            50% {
-                border-color: #9C8CB9;
-                /* lavender */
+            .logo img {
+                width: 17vw;
             }
 
-            75% {
-                border-color: #EF6C00;
-                /* orange */
+            .nav li {
+                font-size: 3vw;
             }
 
-            100% {
-                border-color: #08FDD8;
-                /* turquoise */
+            .knowledge {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .introduction {
+                width: 90vw;
+                text-align: center;
+                order: 1;
+            }
+
+            .introduction h1 {
+                font-size: 5vw;
+            }
+
+            .introduction h2 {
+                font-size: 3.5vw;
+            }
+
+            .portimg {
+                text-align: center;
+            }
+
+            #portimg1 {
+                order: 0;
+
+            }
+
+            #portimg2 {
+                order: 2;
+            }
+
+            .portimg img {
+                width: 80vw;
+            }
+
+            .game {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                order: 2;
+
+            }
+
+            .cell {
+                text-align: center;
+                width: 17vw;
+                height: 17vw;
+                font-size: 2.7vw;
+            }
+
+            .hcj {
+                font-size: 3vw;
+                margin: 2vw 25vw;
+            }
+
+            #scramble-button {
+                font-size: 3vw;
+            }
+
+            .skills {
+                width: 90vw;
+                order: 2;
+            }
+
+            .skills h1 {
+                font-size: 5vw;
+            }
+
+            .skills h2 {
+                font-size: 3.5vw;
+            }
+
+
+
+            .experience h1 {
+                font-size: 5vw;
+            }
+
+            .experience h2 {
+                font-size: 3.5vw;
+            }
+
+            .about h1 {
+                font-size: 5vw;
+            }
+
+            .about h2 {
+                font-size: 3.5vw;
+            }
+
+            .about h3 {
+                font-size: 2vw;
+                text-align: center;
+                left: 38vw;
+                width: 20vw;
+            }
+
+            .bio {
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .bio img {
+                width: 60vw;
+                text-align: center;
+            }
+
+            .graphy h1 {
+                font-size: 5vw;
+                text-align: center;
+
+            }
+
+            .graphy p {
+                font-size: 3vw;
+                text-align: center;
+            }
+
+            .gimp {
+                order: -1;
+            }
+
+            #graphy4 {
+                order: 1;
+            }
+
+            .contact {
+                text-align: center;
+            }
+
+            .contact h1 {
+                font-size: 5vw;
+            }
+
+            .contact p {
+                font-size: 3vw;
+            }
+
+
+
+            .contact-form label {
+                font-size: 2.5vw;
+                margin-bottom: 1vw;
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form input[type="tel"],
+            .contact-form textarea {
+                width: 30vw;
+                font-size: 2.5vw;
+                border: 1px solid #ccc;
+                border-radius: 0.5vw;
+                margin-bottom: 1.5vw;
+                background-color: rgba(255, 255, 255, 0.2);
+                color: white;
+            }
+
+            .contact-form textarea {
+                height: 10vw;
+                resize: vertical;
+            }
+
+
+            .contact-form input[type="submit"]:hover {
+                background-color: #66a9d0;
+            }
+
+
+
+            .contact-section {
+                margin: 3vw 0;
+            }
+
+
+
+            .blog h1 {
+                font-size: 5vw;
+                margin: 0;
+            }
+
+            .blog p {
+                font-size: 3.2vw;
             }
         }
     </style>
-
 </head>
 
-<body>
-    <div class="adios">
-        <div id="audio-control">
-            <label for="music-toggle">Music</label>
-            <input type="checkbox" id="music-toggle">
+<body id="site">
+    <div class="sticky-controls" id="control">
+        <div class="adios">
+            <div id="audio-control">
+                <label for="music-toggle">Music</label>
+                <input type="checkbox" id="music-toggle">
+            </div>
+
+            <audio id="background-music" loop>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
 
-        <audio id="background-music" loop >
-            <source src="music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="theme">
+            <label for="theme-toggle">Theme</label>
+            <input type="checkbox" id="theme-toggle" onclick="theme()">
+        </div>
     </div>
 
-    <div class="theme">
-        <label for="theme-toggle">Theme</label>
-        <input type="checkbox" id="theme-toggle">
-    </div>
-
-
-
-    <div class="header">
-        <div class="logo"><img src="logo1.png" alt=""></div>
+    <div class="header sticky-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="logob.png" alt="" id="logo">
+            </a>
+        </div>
         <div class="nav">
-            <li><a href="portfolio.html"> Portfolio</a></li>
-            <li><a href=""> About</a></li>
-            <li><a href=""> Blog</a></li>
-            <li><a href=""> Conatact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#blog">Blog</a></li>
         </div>
-
     </div>
-    <canvas id="canvas" style="position: absolute; left: 0; z-index: -1;"></canvas>
 
-    <div class="first">
-        <div class="intro">
-            Ritik kratzel
-            <p>Frontend & Backend <br>Web Developer</p>
-            <div class="duction">
-                "Hi, I'm Ritik, a full stack web developer specializing in building user-friendly websites and web
-                applications using HTML, CSS, JavaScript, Wix, and WordPress. With expertise in front-end and back-end
-                technologies like PHP, MySQL, Apache, NGINX, VPS, and Linux, I'm confident in my ability to bring your
-                vision to life."
-                <br>
-                <a href="portfolio.html">View portfolio</a>
+    <div class="content">
+        <div class="knowledge">
+            <div class="introduction">
+                <h1>Hey! I'm Ritik</h1>
+                <h2>A Full Stack Developer with a strong focus on HTML, CSS, and JavaScript. I'm
+                    passionate
+                    about crafting engaging and intuitive websites and web applications that help businesses achieve
+                    their
+                    online goals.In addition to my expertise in these core technologies, I also have experience with
+                    online
+                    website creation platforms such as Wix and WordPress. I'm comfortable working with a variety of
+                    tools
+                    and platforms to deliver the best results for my clients.</h2>
+            </div>
+            <div class="portimg" id="portimg1">
+                <img id="image" src="rkimg1.png" alt="">
+                <button class="hcj" onclick="changeImage('rkimg2.png')" id="addHtml">Add HTML</button>
+                <button class="hcj" onclick="changeImage('rkimg3.png')" id="addCss" style="display: none">Add
+                    CSS</button>
+                <button class="hcj" onclick="changeImage('rkimg4.png')" id="addJs" style="display: none">Add
+                    JavaScript</button>
+            </div>
+
+
+            <div class="portimg" id="portimg2">
+                <div class="game">
+                    <table id="field" style="border: 1px solid black"></table>
+                    <button id="scramble-button">Start The Game</button>
+                    <div id="win">Hi! I see a a pure blood has come through. </div>
+                </div>
+            </div>
+            <div class="skills">
+                <h1>My Skills</h1>
+                <h2>
+                    <li> Proficient in HTML, CSS, JavaScript, PHP, and Wix</li>
+                    <li> Knowledge of front-end design principles and UI/UX best practices</li>
+                    <li> Experience with back-end development using PHP, MySQL, and Apache</li>
+                    <li> Experience with server configuration and management using NGINX, VPS, and Linux</li>
+                    <li> Strong problem-solving and debugging skills</li>
+                    <li> Familiarity with version control systems such as Git and SVN</li>
+                    <li> Ability to work independently and as part of a team</li>
+                    <li> Excellent communication and time management skills</li>
+                </h2>
             </div>
         </div>
-        <div class="profile">
-            <img src="profile.png" alt="">
+        <div class="projects">
+            <h1>Recent Projects</h1>
+            <div class="previous">
+                <div class="work">
+                    <img src="project1.png" alt="">
+                    <p><br><a href="https://pnraoclothingcompany.com">PNRAO</a></p>
+                </div>
+                <div class="work">
+                    <img src="project2.png" alt="">
+                    <p><br><a href="https://womenswearbusiness.com">WOMENS WEAR BUSINESS</a></p>
+                </div>
+                <div class="work">
+                    <img src="project3.png" alt="">
+                    <p> <br><a href="https://wwb-scarves-accessories.com">WWB SCARVES ACCESSORIES</a></p>
+                </div>
+            </div>
         </div>
+        <div class="experience">
+            <h1>Experience</h1>
+            <h2>I am a self-taught full stack web developer who has gained extensive experience through hands-on
+                learning and practical projects. I have a proven track record of delivering high-quality websites
+
+                and web applications that meet my clients' needs and exceed their expectations.
+
+                My journey started by watching online tutorials, reading documentation, and seeking guidance from
+                ChatGPT,
+                Google, and other online resources. I have worked on a variety of projects, including building
+                websites from
+                scratch using HTML, CSS, and JavaScript, and converting designs from Adobe XD to code.
+
+                Throughout my experience, I have continually expanded my skillset and stayed up-to-date with the
+                latest web development technologies and trends. I'm passionate about learning and growing as a
+                developer,
+                and I'm always looking for new opportunities to push my limits and deliver exceptional results for
+                my
+                clients.
+            </h2>
+        </div>
+        <div class="about" id="about">
+            <h1> About Me</h1>
+            <div class="snow_wrap">
+                <div class="snow" id="snow"></div>
+            </div>
+            <h2>Hey, I am Ritik Kratzel <br>from The Himalayas.</h2>
+            <h3 onclick="makeitsnow()">Make It Snow</h3>
+
+        </div>
+        <div class="me">
+            <div class="bio">
+                <img src="me1.jpg" alt="">
+                <div class="graphy" id="graphy1">
+                    <h1>Exploring New Horizons</h1>
+                    <p>I've spent my entire life in Manali, surrounded by the snow-capped Himalayan mountains. While
+                        I
+                        love
+                        my hometown, I have a strong desire to explore other parts of the world, with New Zealand
+                        being
+                        my
+                        top destination, with its stunning natural beauty and abundance of tiny houses that I dream
+                        of
+                        building myself. When I'm not daydreaming about my tiny house, you can usually find me
+                        binge-watching TV shows and movies. I never seem to get tired of it! I also enjoy traveling
+                        with
+                        my
+                        friends and seeking out adventures. And Parkour has always fascinated me, a great way to
+                        experience
+                        thrill and excitement.</p>
+                </div>
+            </div>
+            <div class="bio">
+                <div class="graphy" id="graphy2">
+                    <h1>Cubing Enthusiast</h1>
+                    <p>"I'm passionate about solving Rubik's cubes, and I've spent eight years honing my skills. My
+                        average
+                        solving time for the standard 3x3 cube is sub 20 seconds. I've also delved into various cube
+                        puzzles, including the 2x2, 4x4, and 5x5 cubes, as well as the Megaminx, Pyraminx, Skewb,
+                        and
+                        Mirror
+                        Cube. I even ventured into teaching cubing through a YouTube channel, where I created
+                        instructional
+                        videos. While the channel didn't fully take off due to life's unpredictability, I've always
+                        kept
+                        the
+                        possibility of a revival in mind. Who knows, maybe one day I'll start again."</p>
+                </div>
+                <div class="gimg video" data-video="rubiks.mov" id="graphy2img">
+                    <video width="100%" height="auto" controls preload="none">
+                        <source src="rubiks.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+            <div class="bio">
+                <img src="me3.jpg" alt="">
+                <div class="graphy">
+                    <h1>Skateboarding Journey</h1>
+                    <p>I've been into skateboarding for six years now. Although I haven't learned many tricks yet,
+                        it's
+                        been
+                        a fun journey. My house is up in the mountains, so finding smooth roads for practice can be
+                        a
+                        challenge, but I won't blame it all on that. Truth be told, there have been times when my
+                        own
+                        laziness got the best of me. Still, back in my 11th and 12th-grade years, I used to skate to
+                        school
+                        daily, which gave me some good cruising experience. I hope to learn more tricks in the
+                        future
+                        once I
+                        shake off that laziness. I also have plans for a long skate trip someday. Let's see when
+                        that
+                        happens.</p>
+                </div>
+            </div>
+            <div class="bio">
+                <div class="graphy" id="graphy4">
+                    <h1>My Path to Web Development:</h1>
+                    <p>"Back in school, I was all about mod apps, torrents, rooting phones, and getting free Wi-Fi,
+                        fueling
+                        my passion for hacking. I dreamed of becoming an ethical hacker by day and channeling my
+                        inner
+                        'Mr.
+                        Robot' by night.
+
+                        I acquired a Raspberry Pi 400, my first personal computer, and embarked on my hacking
+                        journey.
+                        The
+                        ARM architecture presented challenges, but destiny had a different plan.
+
+                        Destiny led me to a YouTube HTML tutorial, unlocking the world of web development. A few
+                        months
+                        later, it played its hand again. My brother and his partner needed a web developer, and with
+                        basic
+                        knowledge, I joined them.
+
+                        Self-taught through YouTube and hands-on experimentation, I found my way into web
+                        development.
+                        Today, I'm a web developer with a lingering passion for hacking, occasionally venturing into
+                        'naughty business.' keeping the hacker spirit alive."
+
+                    </p>
+                </div>
+                <img src="me4.jpg" alt="" id="graphy4img">
+            </div>
+            <div class="bio">
+                <img src="bio5.jpg" alt="">
+                <div class="graphy">
+                    <h1>Starry scars flawed artistry</h1>
+                    <p>"Ever since I was a little boy, I've dreamt of becoming an astronaut and exploring space.
+                        Back in
+                        school, I had a plan, but life had other ideas. Now, at 21, my top goal is still to go to
+                        space.
+                        I
+                        know it's not the usual way, but I'm on a path to be a big-shot entrepreneur. Maybe I'll
+                        earn
+                        enough
+                        for a space ticket, or maybe, just maybe, I'll be buddies with Elon Musk, and he'll say,
+                        'Come
+                        on,
+                        let's go!' These are the dreams of a 21-year-old, still reaching for the stars."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <h1>Contact me</h1>
+            <p>"Feel free to reach out if you have any inquiries, project proposals, or general questions. I'll do
+                my
+                best to respond promptly and assist you with your needs. Looking forward to connecting with you!"
+            </p>
+            <div class="form">
+                <form action="contact.php" method="POST" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required><br>
+
+                    <label for="questions">Questions:</label>
+                    <textarea id="questions" name="questions" rows="4" cols="50" required></textarea><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="blog" id="blog">
+            <h1>Blog</h1>
+            <p>While there are currently no blogs on the website, I'm eagerly preparing to embark on an exciting
+                journey
+                of regular blogging. I'll be regularly publishing informative and engaging blog posts, covering a
+                wide
+                range of topics. Stay tuned for insightful content that will inform, entertain, and inspire!"</p>
+        </div>
+
     </div>
-    <script type="text/javascript" src="https://hovertree.com/texiao/html5/index/hovertreewelcome.js">
-    </script>
-<script src="java.js"></script>
-<script src="audio.js"></script>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="audio.js"></script>
     <script>
-        // Get the theme toggle switch
-        const themeToggle = document.getElementById("theme-toggle");
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav a");
 
-        // Function to toggle theme (background color)
-        function toggleTheme() {
-            const body = document.body;
+            navLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
 
-            if (themeToggle.checked) {
-                // Set background color to dark theme color
-                body.style.backgroundColor = 'black';
+                    const targetId = this.getAttribute("href");
+                    const targetSection = document.querySelector(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: 'smooth'
+                        });
+
+                        // Remove underline from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove("underline");
+                        });
+
+                        // Add underline to the clicked link
+                        this.classList.add("underline");
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        var header = document.querySelector(".sticky-header");
+        var logo = document.querySelector(".logo");
+        var nav = document.querySelector(".nav");
+        var navlinks = document.querySelectorAll(".nav li a");
+        var adios = document.querySelector(".adios");
+        var scrolled = false;
+        var audioLabel = document.querySelector("#audio-control");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50 && !scrolled) {
+                header.style.top = "0vw";
+                logo.style.display = "none";
+                nav.style.justifyContent = "space-evenly";
+                nav.style.padding = "1.5vw";
+                adios.style.left = "2vw";
+                scrolled = true;
+                audioLabel.style.right = "2vw";
+            } else if (window.scrollY <= 50 && scrolled) {
+                header.style.top = "3vw";
+                logo.style.display = "block";
+                nav.style.justifyContent = "space-around";
+                adios.style.right = "10vw";
+                adios.style.left = "";
+                scrolled = false;
+                audioLabel.style.right = "2vw";
+            }
+        });
+
+        function makeitsnow() {
+            var snowWrap = document.getElementById("snow");
+            snowWrap.style.display = "block";
+        }
+
+        var isDarkTheme = false;
+
+        var isDarkTheme = false;
+
+        function theme() {
+            var siteElement = document.getElementById("site");
+            var currentColor = getComputedStyle(siteElement).backgroundColor;
+            var logoElement = document.getElementById("logo");
+
+            var blackColor = "black";
+            var blueColor = "white";
+
+            if (currentColor === blueColor || currentColor === "rgb(255, 255, 255)") {
+                siteElement.style.backgroundColor = blackColor;
+                siteElement.style.color = "white";
+                nav.style.backgroundColor = blackColor;
+                navlinks.forEach(function (link) {
+                    link.style.color = "white";
+                });
+                // Change the logo for the dark theme
+                logoElement.src = "logob.png";
             } else {
-                // Set background color to light theme color (green)
-                body.style.backgroundColor = '#8ac6e9';
+                siteElement.style.backgroundColor = blueColor;
+                siteElement.style.color = "black";
+                nav.style.backgroundColor = blueColor;
+                navlinks.forEach(function (link) {
+                    link.style.color = "black";
+                });
+                // Change the logo for the light theme
+                logoElement.src = "logow.png";
+            }
+        }
+        // Select all elements with the "video" class
+        const videoContainers = document.querySelectorAll(".video");
+
+        // Add event listeners for mouseenter and mouseleave to each video container
+        videoContainers.forEach((container) => {
+            const video = container.querySelector("video");
+
+            container.addEventListener("mouseenter", () => {
+                // Play the video on hover
+                video.play();
+                // Increase the size of the video by 30%
+                video.style.transform = "scale(1.3)";
+            });
+
+            container.addEventListener("mouseleave", () => {
+                // Pause and reset the video on mouse leave
+                video.pause();
+                video.currentTime = 0;
+                // Restore the original size
+                video.style.transform = "scale(1)";
+            });
+        });
+
+    </script>
+    <script>
+        let initialImage = 'rkimg1.png'; // Store the initial image source
+        let step = 0; // Keep track of the step in the loop
+
+        function changeImage(imageSrc) {
+            document.getElementById('image').src = imageSrc;
+
+            if (imageSrc === 'rkimg2.png') {
+                document.getElementById('addCss').style.display = 'inline-block';
+                document.getElementById('addHtml').style.display = 'none';
+            } else if (imageSrc === 'rkimg3.png') {
+                document.getElementById('addJs').style.display = 'inline-block';
+                document.getElementById('addCss').style.display = 'none';
+            } else if (imageSrc === 'rkimg4.png') {
+                document.getElementById('addJs').style.display = 'none';
+                document.getElementById('addHtml').style.display = 'inline-block';
+                document.getElementById('addHtml').innerText = "Break Me Again";
+                document.getElementById('addHtml').setAttribute('onclick', "resetImages()");
             }
         }
 
-        // Add event listener to the theme toggle switch
-        themeToggle.addEventListener("change", toggleTheme);
+        function resetImages() {
+            document.getElementById('addHtml').innerText = "Add HTML"; // Reset the button text
+            document.getElementById('addCss').style.display = 'none';
+            document.getElementById('addHtml').style.display = 'inline-block'; // Display "Add HTML" button
+            document.getElementById('image').src = initialImage; // Reset image to the initial state
+        }
 
+        document.getElementById('portimg1').addEventListener('click', function () {
+            step++;
+            if (step > 3) { // Modify this number according to the total steps in the sequence
+                resetImages(); // Reset the sequence after one cycle
+                step = 0; // Reset the step to loop again
+            } else {
+                if (step === 1) {
+                    changeImage('rkimg2.png');
+                } else if (step === 2) {
+                    changeImage('rkimg3.png');
+                } else if (step === 3) {
+                    changeImage('rkimg4.png');
+                }
+            }
+        });
+    </script>
+
+
+    <script>
+        var size = 4;
+        var fieldCells = createField();
+        var values;
+        var emptyX, emptyY;
+        var LEFT = { dx: -1, dy: 0 };
+        var RIGHT = { dx: 1, dy: 0 };
+        var UP = { dx: 0, dy: -1 };
+        var DOWN = { dx: 0, dy: 1 };
+
+        // Define your custom text for each tile
+        var customTexts = [
+            "HTML 1",
+            "CSS 2",
+            "JS 3",
+            "PHP 4",
+            "LINUX 5",
+            "UI/UX 6",
+            "MYSQL 7",
+            "VPS 8",
+            "GIT 9",
+            "NGNIX 10",
+            "APACHE 11",
+            "WIX 12",
+            "PHONE 13",
+            "AI 14",
+            "PYTHON 15",
+            "" // Empty cell
+        ];
+
+        var customColors = [
+            "#a5c7c7",
+            "#a5c7c7",
+            "#a5c7c7",
+            "#a5c7c7",
+            "#6e8ff2",
+            "#6e8ff2",
+            "#6e8ff2",
+            "#6e8ff2",
+            "#dfc822",
+            "#dfc822",
+            "#dfc822",
+            "#dfc822",
+            "#FF9999",
+            "#FF9999",
+            "#FF9999",
+            "white" // Empty cell color
+        ];
+
+        function createField() {
+            var cells = [];
+            var table = document.getElementById('field');
+            for (var y = 0; y < size; y++) {
+                var tr = document.createElement('tr');
+                table.appendChild(tr);
+                var rowCells = [];
+                cells.push(rowCells);
+                for (var x = 0; x < size; x++) {
+                    var td = document.createElement('td');
+                    td.setAttribute('class', 'cell');
+                    td.textContent = ''; // Initialize with no text
+                    tr.appendChild(td);
+                    rowCells.push(td);
+                }
+            }
+            return cells;
+        }
+
+        function createInitialValues() {
+            emptyX = emptyY = size - 1;
+            var v = [];
+            var i = 0;
+            for (var y = 0; y < size; y++) {
+                var rowValues = [];
+                v.push(rowValues);
+                for (var x = 0; x < size; x++) {
+                    rowValues.push(customTexts[i]);
+                    i++;
+                }
+            }
+            v[emptyY][emptyX] = ''; // Empty cell
+            return v;
+        }
+
+        function draw() {
+            // Set a specific background color for the empty cell
+            fieldCells[emptyY][emptyX].style.backgroundColor = customColors[customTexts.length - 1];
+
+            for (var y = 0; y < size; y++) {
+                for (var x = 0; x < size; x++) {
+                    var v = values[y][x];
+                    var td = fieldCells[y][x];
+                    td.textContent = v;
+                    var colorIndex = customTexts.indexOf(v); // Find the index of text
+                    if (colorIndex !== -1) {
+                        td.style.backgroundColor = customColors[colorIndex]; // Set the background color
+                    }
+                }
+            }
+        }
+
+
+        function makeMove(move) {
+            var newX = emptyX + move.dx, newY = emptyY + move.dy;
+            if ((newX >= size) || (newX < 0) ||
+                (newY >= size) || (newY < 0)
+            ) {
+                return false;
+            }
+            var c = values[newY][newX];
+            values[newY][newX] = 0;
+            values[emptyY][emptyX] = c;
+            emptyX = newX;
+            emptyY = newY;
+            return true;
+        }
+
+        function shuffle() {
+            var options = [LEFT, RIGHT, UP, DOWN];
+            var iterations = 5;
+            for (var i = 0; i < iterations; i++) {
+                var move = options[Math.floor(Math.random() * options.length)];
+                makeMove(move);
+            }
+        }
+
+        function gameOver() {
+            var expectedValue = 1;
+            for (var y = 0; y < size; y++) {
+                for (var x = 0; x < size; x++) {
+                    if (values[y][x] === expectedValue) {
+                        expectedValue++;
+                    } else {
+                        if (x === size - 1 && y === size - 1 && values[y][x] === 0) {
+                            return true;
+                        }
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        function handleTileClick(tile, x, y) {
+            if (x === emptyX && y === emptyY) {
+                return; // Clicked on an empty cell, do nothing
+            }
+
+            // Check if the clicked tile is adjacent to the empty cell
+            if (
+                (x === emptyX && Math.abs(y - emptyY) === 1) ||
+                (y === emptyY && Math.abs(x - emptyX) === 1)
+            ) {
+                var move = { dx: x - emptyX, dy: y - emptyY };
+                if (makeMove(move)) {
+                    draw();
+                    if (gameOver()) {
+                        setTimeout(function () {
+                            alert('Game over, you won!');
+                            init();
+                        }, 1000);
+                    }
+                }
+            }
+        }
+
+        // Add click event listeners to each cell
+        for (var y = 0; y < size; y++) {
+            for (var x = 0; x < size; x++) {
+                fieldCells[y][x].addEventListener('click', (function (x, y) {
+                    return function () {
+                        handleTileClick(this, x, y);
+                    };
+                })(x, y));
+            }
+        }
+
+        function init() {
+            values = createInitialValues();
+            shuffle();
+            draw();
+        }
+
+
+        init();
+
+        // Function to scramble the puzzle more thoroughly
+        function scramblePuzzle() {
+            var numMoves = 100; // Adjust the number of moves as needed
+            for (var i = 0; i < numMoves; i++) {
+                var options = [LEFT, RIGHT, UP, DOWN];
+                var move = options[Math.floor(Math.random() * options.length)];
+                makeMove(move);
+            }
+            draw();
+        }
+
+
+
+        document.getElementById('scramble-button').addEventListener('click', function () {
+            scramblePuzzle(); // Scramble the puzzle with more moves
+            document.getElementById('win-message').style.display = 'none'; // Hide the win message when scrambled
+        });
+
+        function showWinMessage() {
+            document.getElementById('win-message').style.display = 'block';
+        }
+
+        function checkWin() {
+            var expectedValue = 1;
+            for (var y = 0; y < size; y++) {
+                for (var x = 0; x < size; x++) {
+                    if (values[y][x] === expectedValue) {
+                        expectedValue++;
+                    } else {
+                        if (x === size - 1 && y === size - 1 && values[y][x] === '') {
+                            showWinMessage();
+                            return;
+                        }
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Add click event listeners to each cell
+        for (var y = 0; y < size; y++) {
+            for (var x = 0; x < size; x++) {
+                fieldCells[y][x].addEventListener('click', (function (x, y) {
+                    return function () {
+                        handleTileClick(this, x, y);
+                    };
+                })(x, y));
+            }
+        }
     </script>
 </body>
 
