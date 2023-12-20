@@ -51,6 +51,12 @@
             align-items: center;
         }
 
+        .nav.active {
+            border-bottom: 2px solid white;
+        }
+
+
+
         .nav li {
             position: relative;
             font-size: 1.5vw;
@@ -160,6 +166,36 @@
             font-size: 1vw;
         }
 
+        #addHtml {
+            background-color: whitesmoke;
+            border: none;
+            padding: 0vw 1vw;
+            font-size: 1.2vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+        }
+
+        #addCss {
+            background-color: black;
+            color: white;
+            padding: 0vw 1vw;
+            font-size: 1.2vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            border: 0.15vw solid white;
+        }
+
+        #addJs {
+            background-color: black;
+            color: white;
+            padding: 0vw 1vw;
+            font-size: 1.2vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            border: 0.15vw solid white;
+            transition: transform 1s ease-in-out;
+        }
+
         .skills {
             width: 42vw;
             font-family: Songti SC;
@@ -178,7 +214,8 @@
         }
 
         .portimg img {
-            width: 30vw;
+            width: 29vw;
+            border-radius: 12vw;
         }
 
         #portimg1 {
@@ -230,48 +267,56 @@
             background-color: #08FDD8;
         }
 
+        .recent {
+            position: relative;
+            text-align: center;
+            margin: 10vw 0 0 0;
+        }
+
+        .recent h1 {
+            font-size: 3vw;
+        }
+
         .projects {
             position: relative;
             font-family: Songti SC;
             ;
             text-align: center;
-            margin: 8vw 0;
+            margin: 4vw 0;
+            display: flex;
+            justify-content: space-around;
         }
 
         .projects h1 {
             font-size: 3vw;
         }
 
-        .projects h2 {
-            font-size: 1.2vw;
-        }
-
-        .previous {
+        .monitor {
             position: relative;
-            display: flex;
-            justify-content: space-around;
+            width: 48vh;
+            height: 30vh;
+            border: 2vh solid #333;
+            border-top-left-radius: 3vh;
+            border-top-right-radius: 3vh;
+            overflow: hidden;
         }
 
-        .work {
-            position: relative;
+        .screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
         }
 
-        .work img {
-            position: relative;
-            width: 10vw;
+        .screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .work p {
-            position: relative;
 
-        }
-
-        .work a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2vw;
-            font-family: Arial, Helvetica, sans-serif;
-        }
 
         .experience {
             position: relative;
@@ -441,13 +486,7 @@
         }
 
 
-        .video {
-            width: 2000%;
-            /* Increase the size by 30% */
-            height: auto;
-            display: none;
-            /* Hide the video initially */
-        }
+
 
         .gimg:hover .video {
             display: block;
@@ -455,7 +494,14 @@
         }
 
 
+        .cubevid {
+            position: relative;
+            width: 25vw;
+        }
 
+        .cubevid video {
+            width: 30vw;
+        }
 
         .contact {
             position: relative;
@@ -805,7 +851,7 @@
             </a>
         </div>
         <div class="nav">
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#blog">Blog</a></li>
@@ -813,89 +859,100 @@
     </div>
 
     <div class="content">
-        <div class="knowledge">
-            <div class="introduction">
-                <h1>Hey! I'm Ritik</h1>
-                <h2>A Full Stack Developer with a strong focus on HTML, CSS, and JavaScript. I'm
-                    passionate
-                    about crafting engaging and intuitive websites and web applications that help businesses achieve
-                    their
-                    online goals.In addition to my expertise in these core technologies, I also have experience with
-                    online
-                    website creation platforms such as Wix and WordPress. I'm comfortable working with a variety of
-                    tools
-                    and platforms to deliver the best results for my clients.</h2>
-            </div>
-            <div class="portimg" id="portimg1">
-                <img id="image" src="rkimg1.png" alt="">
-                <button class="hcj" onclick="changeImage('rkimg2.png')" id="addHtml">Add HTML</button>
-                <button class="hcj" onclick="changeImage('rkimg3.png')" id="addCss" style="display: none">Add
-                    CSS</button>
-                <button class="hcj" onclick="changeImage('rkimg4.png')" id="addJs" style="display: none">Add
-                    JavaScript</button>
-            </div>
+        <section id="portfolio">
+            <div class="knowledge">
+                <div class="introduction">
+                    <h1>Hey! I'm Ritik</h1>
+                    <h2>A Full Stack Developer with a strong focus on HTML, CSS, and JavaScript. I'm
+                        passionate
+                        about crafting engaging and intuitive websites and web applications that help businesses achieve
+                        their
+                        online goals.In addition to my expertise in these core technologies, I also have experience with
+                        online
+                        website creation platforms such as Wix and WordPress. I'm comfortable working with a variety of
+                        tools
+                        and platforms to deliver the best results for my clients.</h2>
+                </div>
+                <div class="portimg" id="portimg1">
+                    <img id="image" src="rkimg1.png" alt="">
+                    <button class="hcj" onclick="changeImage('rkimg2.png')" id="addHtml">Add HTML</button>
+                    <button class="hcj" onclick="changeImage('rkimg3.png')" id="addCss" style="display: none">Add
+                        CSS</button>
+                    <button class="hcj" onclick="changeImage('rkimg4.png')" id="addJs" style="display: none">Add
+                        JavaScript</button>
+                </div>
 
 
-            <div class="portimg" id="portimg2">
-                <div class="game">
-                    <table id="field" style="border: 1px solid black"></table>
-                    <button id="scramble-button">Start The Game</button>
-                    <div id="win">Hi! I see a a pure blood has come through. </div>
+                <div class="portimg" id="portimg2">
+                    <div class="game">
+                        <table id="field" style="border: 1px solid black"></table>
+                        <button id="scramble-button">Start The Game</button>
+                        <div id="win">Hi! I see a a pure blood has come through. </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h1>My Skills</h1>
+                    <h2>
+                        <li> Proficient in HTML, CSS, JavaScript, PHP, and Wix</li>
+                        <li> Knowledge of front-end design principles and UI/UX best practices</li>
+                        <li> Experience with back-end development using PHP, MySQL, and Apache</li>
+                        <li> Experience with server configuration and management using NGINX, VPS, and Linux</li>
+                        <li> Strong problem-solving and debugging skills</li>
+                        <li> Familiarity with version control systems such as Git and SVN</li>
+                        <li> Ability to work independently and as part of a team</li>
+                        <li> Excellent communication and time management skills</li>
+                    </h2>
                 </div>
             </div>
-            <div class="skills">
-                <h1>My Skills</h1>
-                <h2>
-                    <li> Proficient in HTML, CSS, JavaScript, PHP, and Wix</li>
-                    <li> Knowledge of front-end design principles and UI/UX best practices</li>
-                    <li> Experience with back-end development using PHP, MySQL, and Apache</li>
-                    <li> Experience with server configuration and management using NGINX, VPS, and Linux</li>
-                    <li> Strong problem-solving and debugging skills</li>
-                    <li> Familiarity with version control systems such as Git and SVN</li>
-                    <li> Ability to work independently and as part of a team</li>
-                    <li> Excellent communication and time management skills</li>
+            <div class="experience">
+                <h1>Experience</h1>
+                <h2>I am a self-taught full stack web developer who has gained extensive experience through hands-on
+                    learning and practical projects. I have a proven track record of delivering high-quality websites
+
+                    and web applications that meet my clients' needs and exceed their expectations.
+
+                    My journey started by watching online tutorials, reading documentation, and seeking guidance from
+                    ChatGPT,
+                    Google, and other online resources. I have worked on a variety of projects, including building
+                    websites from
+                    scratch using HTML, CSS, and JavaScript, and converting designs from Adobe XD to code.
+
+                    Throughout my experience, I have continually expanded my skillset and stayed up-to-date with the
+                    latest web development technologies and trends. I'm passionate about learning and growing as a
+                    developer,
+                    and I'm always looking for new opportunities to push my limits and deliver exceptional results for
+                    my
+                    clients.
                 </h2>
             </div>
-        </div>
-        <div class="projects">
-            <h1>Recent Projects</h1>
-            <div class="previous">
-                <div class="work">
-                    <img src="project1.png" alt="">
-                    <p><br><a href="https://pnraoclothingcompany.com">PNRAO</a></p>
-                </div>
-                <div class="work">
-                    <img src="project2.png" alt="">
-                    <p><br><a href="https://womenswearbusiness.com">WOMENS WEAR BUSINESS</a></p>
-                </div>
-                <div class="work">
-                    <img src="project3.png" alt="">
-                    <p> <br><a href="https://wwb-scarves-accessories.com">WWB SCARVES ACCESSORIES</a></p>
+            <div class="recent">
+                <h1>Recent Projects</h1>
+
+                <div class="projects">
+                    <div class="monitor">
+                        <div class="screen">
+                            <a href="https://ornaohana.com"><img src="orna.png" alt="orna"></a>
+
+                        </div>
+                    </div>
+                    <div class="monitor">
+                        <div class="screen">
+                            <a href="tailorstailor.com"><img src="tailor.png" alt="orna"></a>
+                        </div>
+                    </div>
+                    <div class="monitor">
+                        <div class="screen">
+                            <a href="wwb-scarf-accesories.com"></a> <img src="scarf.png" alt="orna">
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-        <div class="experience">
-            <h1>Experience</h1>
-            <h2>I am a self-taught full stack web developer who has gained extensive experience through hands-on
-                learning and practical projects. I have a proven track record of delivering high-quality websites
 
-                and web applications that meet my clients' needs and exceed their expectations.
-
-                My journey started by watching online tutorials, reading documentation, and seeking guidance from
-                ChatGPT,
-                Google, and other online resources. I have worked on a variety of projects, including building
-                websites from
-                scratch using HTML, CSS, and JavaScript, and converting designs from Adobe XD to code.
-
-                Throughout my experience, I have continually expanded my skillset and stayed up-to-date with the
-                latest web development technologies and trends. I'm passionate about learning and growing as a
-                developer,
-                and I'm always looking for new opportunities to push my limits and deliver exceptional results for
-                my
-                clients.
-            </h2>
-        </div>
-        <div class="about" id="about">
+        </section>
+        <section class="about" id="about">
             <h1> About Me</h1>
             <div class="snow_wrap">
                 <div class="snow" id="snow"></div>
@@ -903,125 +960,121 @@
             <h2>Hey, I am Ritik Kratzel <br>from The Himalayas.</h2>
             <h3 onclick="makeitsnow()">Make It Snow</h3>
 
-        </div>
-        <div class="me">
-            <div class="bio">
-                <img src="me1.jpg" alt="">
-                <div class="graphy" id="graphy1">
-                    <h1>Exploring New Horizons</h1>
-                    <p>I've spent my entire life in Manali, surrounded by the snow-capped Himalayan mountains. While
-                        I
-                        love
-                        my hometown, I have a strong desire to explore other parts of the world, with New Zealand
-                        being
-                        my
-                        top destination, with its stunning natural beauty and abundance of tiny houses that I dream
-                        of
-                        building myself. When I'm not daydreaming about my tiny house, you can usually find me
-                        binge-watching TV shows and movies. I never seem to get tired of it! I also enjoy traveling
-                        with
-                        my
-                        friends and seeking out adventures. And Parkour has always fascinated me, a great way to
-                        experience
-                        thrill and excitement.</p>
+            <div class="me">
+                <div class="bio">
+                    <img src="me1.jpg" alt="">
+                    <div class="graphy" id="graphy1">
+                        <h1>Exploring New Horizons</h1>
+                        <p>I've spent my entire life in Manali, surrounded by the snow-capped Himalayan mountains. While
+                            I
+                            love
+                            my hometown, I have a strong desire to explore other parts of the world, with New Zealand
+                            being
+                            my
+                            top destination, with its stunning natural beauty and abundance of tiny houses that I dream
+                            of
+                            building myself. When I'm not daydreaming about my tiny house, you can usually find me
+                            binge-watching TV shows and movies. I never seem to get tired of it! I also enjoy traveling
+                            with
+                            my
+                            friends and seeking out adventures. And Parkour has always fascinated me, a great way to
+                            experience
+                            thrill and excitement.</p>
+                    </div>
+                </div>
+                <div class="bio">
+                    <div class="graphy" id="graphy2">
+                        <h1>Cubing Enthusiast</h1>
+                        <p>"I'm passionate about solving Rubik's cubes, and I've spent eight years honing my skills. My
+                            average
+                            solving time for the standard 3x3 cube is sub 20 seconds. I've also delved into various cube
+                            puzzles, including the 2x2, 4x4, and 5x5 cubes, as well as the Megaminx, Pyraminx, Skewb,
+                            and
+                            Mirror
+                            Cube. I even ventured into teaching cubing through a YouTube channel, where I created
+                            instructional
+                            videos. While the channel didn't fully take off due to life's unpredictability, I've always
+                            kept
+                            the
+                            possibility of a revival in mind. Who knows, maybe one day I'll start again."</p>
+                    </div>
+                    <div class="cubevid">
+                        <video src="rubiks.mov" controls></video>
+                    </div>
+                </div>
+                <div class="bio">
+                    <img src="me3.jpg" alt="">
+                    <div class="graphy">
+                        <h1>Skateboarding Journey</h1>
+                        <p>I've been into skateboarding for six years now. Although I haven't learned many tricks yet,
+                            it's
+                            been
+                            a fun journey. My house is up in the mountains, so finding smooth roads for practice can be
+                            a
+                            challenge, but I won't blame it all on that. Truth be told, there have been times when my
+                            own
+                            laziness got the best of me. Still, back in my 11th and 12th-grade years, I used to skate to
+                            school
+                            daily, which gave me some good cruising experience. I hope to learn more tricks in the
+                            future
+                            once I
+                            shake off that laziness. I also have plans for a long skate trip someday. Let's see when
+                            that
+                            happens.</p>
+                    </div>
+                </div>
+                <div class="bio">
+                    <div class="graphy" id="graphy4">
+                        <h1>My Path to Web Development:</h1>
+                        <p>"Back in school, I was all about mod apps, torrents, rooting phones, and getting free Wi-Fi,
+                            fueling
+                            my passion for hacking. I dreamed of becoming an ethical hacker by day and channeling my
+                            inner
+                            'Mr.
+                            Robot' by night.
+
+                            I acquired a Raspberry Pi 400, my first personal computer, and embarked on my hacking
+                            journey.
+                            The
+                            ARM architecture presented challenges, but destiny had a different plan.
+
+                            Destiny led me to a YouTube HTML tutorial, unlocking the world of web development. A few
+                            months
+                            later, it played its hand again. My brother and his partner needed a web developer, and with
+                            basic
+                            knowledge, I joined them.
+
+                            Self-taught through YouTube and hands-on experimentation, I found my way into web
+                            development.
+                            Today, I'm a web developer with a lingering passion for hacking, occasionally venturing into
+                            'naughty business.' keeping the hacker spirit alive."
+
+                        </p>
+                    </div>
+                    <img src="me4.jpg" alt="" id="graphy4img">
+                </div>
+                <div class="bio">
+                    <img src="starryscars.jpg" alt="">
+                    <div class="graphy">
+                        <h1>Starry scars flawed artistry</h1>
+                        <p>"Ever since I was a little boy, I've dreamt of becoming an astronaut and exploring space.
+                            Back in
+                            school, I had a plan, but life had other ideas. Now, at 21, my top goal is still to go to
+                            space.
+                            I
+                            know it's not the usual way, but I'm on a path to be a big-shot entrepreneur. Maybe I'll
+                            earn
+                            enough
+                            for a space ticket, or maybe, just maybe, I'll be buddies with Elon Musk, and he'll say,
+                            'Come
+                            on,
+                            let's go!' These are the dreams of a 21-year-old, still reaching for the stars."</p>
+                    </div>
                 </div>
             </div>
-            <div class="bio">
-                <div class="graphy" id="graphy2">
-                    <h1>Cubing Enthusiast</h1>
-                    <p>"I'm passionate about solving Rubik's cubes, and I've spent eight years honing my skills. My
-                        average
-                        solving time for the standard 3x3 cube is sub 20 seconds. I've also delved into various cube
-                        puzzles, including the 2x2, 4x4, and 5x5 cubes, as well as the Megaminx, Pyraminx, Skewb,
-                        and
-                        Mirror
-                        Cube. I even ventured into teaching cubing through a YouTube channel, where I created
-                        instructional
-                        videos. While the channel didn't fully take off due to life's unpredictability, I've always
-                        kept
-                        the
-                        possibility of a revival in mind. Who knows, maybe one day I'll start again."</p>
-                </div>
-                <div class="gimg video" data-video="rubiks.mov" id="graphy2img">
-                    <video width="100%" height="auto" controls preload="none">
-                        <source src="rubiks.mov" type="video/quicktime">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
 
-            </div>
-            <div class="bio">
-                <img src="me3.jpg" alt="">
-                <div class="graphy">
-                    <h1>Skateboarding Journey</h1>
-                    <p>I've been into skateboarding for six years now. Although I haven't learned many tricks yet,
-                        it's
-                        been
-                        a fun journey. My house is up in the mountains, so finding smooth roads for practice can be
-                        a
-                        challenge, but I won't blame it all on that. Truth be told, there have been times when my
-                        own
-                        laziness got the best of me. Still, back in my 11th and 12th-grade years, I used to skate to
-                        school
-                        daily, which gave me some good cruising experience. I hope to learn more tricks in the
-                        future
-                        once I
-                        shake off that laziness. I also have plans for a long skate trip someday. Let's see when
-                        that
-                        happens.</p>
-                </div>
-            </div>
-            <div class="bio">
-                <div class="graphy" id="graphy4">
-                    <h1>My Path to Web Development:</h1>
-                    <p>"Back in school, I was all about mod apps, torrents, rooting phones, and getting free Wi-Fi,
-                        fueling
-                        my passion for hacking. I dreamed of becoming an ethical hacker by day and channeling my
-                        inner
-                        'Mr.
-                        Robot' by night.
-
-                        I acquired a Raspberry Pi 400, my first personal computer, and embarked on my hacking
-                        journey.
-                        The
-                        ARM architecture presented challenges, but destiny had a different plan.
-
-                        Destiny led me to a YouTube HTML tutorial, unlocking the world of web development. A few
-                        months
-                        later, it played its hand again. My brother and his partner needed a web developer, and with
-                        basic
-                        knowledge, I joined them.
-
-                        Self-taught through YouTube and hands-on experimentation, I found my way into web
-                        development.
-                        Today, I'm a web developer with a lingering passion for hacking, occasionally venturing into
-                        'naughty business.' keeping the hacker spirit alive."
-
-                    </p>
-                </div>
-                <img src="me4.jpg" alt="" id="graphy4img">
-            </div>
-            <div class="bio">
-                <img src="bio5.jpg" alt="">
-                <div class="graphy">
-                    <h1>Starry scars flawed artistry</h1>
-                    <p>"Ever since I was a little boy, I've dreamt of becoming an astronaut and exploring space.
-                        Back in
-                        school, I had a plan, but life had other ideas. Now, at 21, my top goal is still to go to
-                        space.
-                        I
-                        know it's not the usual way, but I'm on a path to be a big-shot entrepreneur. Maybe I'll
-                        earn
-                        enough
-                        for a space ticket, or maybe, just maybe, I'll be buddies with Elon Musk, and he'll say,
-                        'Come
-                        on,
-                        let's go!' These are the dreams of a 21-year-old, still reaching for the stars."</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact" id="contact">
+        </section>
+        <section class="contact" id="contact">
             <h1>Contact me</h1>
             <p>"Feel free to reach out if you have any inquiries, project proposals, or general questions. I'll do
                 my
@@ -1035,58 +1088,123 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required><br>
 
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required><br>
-
                     <label for="questions">Questions:</label>
                     <textarea id="questions" name="questions" rows="4" cols="50" required></textarea><br>
 
                     <input type="submit" value="Submit">
                 </form>
             </div>
-        </div>
-        <div class="blog" id="blog">
+        </section>
+
+        <section class="blog" id="blog">
             <h1>Blog</h1>
             <p>While there are currently no blogs on the website, I'm eagerly preparing to embark on an exciting
                 journey
                 of regular blogging. I'll be regularly publishing informative and engaging blog posts, covering a
                 wide
                 range of topics. Stay tuned for insightful content that will inform, entertain, and inspire!"</p>
-        </div>
+        </section>
 
     </div>
 
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="audio.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".content > section");
             const navLinks = document.querySelectorAll(".nav a");
 
-            navLinks.forEach(link => {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault();
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+            }
 
-                    const targetId = this.getAttribute("href");
-                    const targetSection = document.querySelector(targetId);
+            function setActiveLink() {
+                let found = false;
 
-                    if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop,
-                            behavior: 'smooth'
-                        });
-
-                        // Remove underline from all links
-                        navLinks.forEach(link => {
-                            link.classList.remove("underline");
-                        });
-
-                        // Add underline to the clicked link
-                        this.classList.add("underline");
+                sections.forEach((section, index) => {
+                    if (!found && isElementInViewport(section)) {
+                        navLinks.forEach((link) => link.classList.remove("active"));
+                        navLinks[index].classList.add("active");
+                        found = true;
                     }
                 });
+            }
+
+            function scrollToSection(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth",
+                });
+            }
+
+            setActiveLink();
+            window.addEventListener("scroll", setActiveLink);
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", scrollToSection);
             });
         });
+
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="audio.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".content > section");
+            const navLinks = document.querySelectorAll(".nav a");
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+            }
+
+            function setActiveLink() {
+                let found = false;
+
+                sections.forEach((section, index) => {
+                    if (!found && isElementInViewport(section)) {
+                        navLinks.forEach((link) => link.classList.remove("active"));
+                        navLinks[index].classList.add("active");
+                        found = true;
+                    }
+                });
+            }
+
+            function scrollToSection(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: "smooth",
+                });
+            }
+
+            function setActiveLink() {
+                let found = false;
+
+                sections.forEach((section, index) => {
+                    if (!found && isElementInViewport(section)) {
+                        navLinks.forEach((link) => link.classList.remove("active"));
+                        navLinks[index].classList.add("active");
+                        console.log("Active class applied to:", navLinks[index]);
+                        found = true;
+                    }
+                });
+            }
+
+        });
+
     </script>
 
     <script>
@@ -1196,6 +1314,7 @@
                 document.getElementById('addJs').style.display = 'none';
                 document.getElementById('addHtml').style.display = 'inline-block';
                 document.getElementById('addHtml').innerText = "Break Me Again";
+                addHtmlElement.style.color = 'red'; // Change the color to red (or any other color you prefer)
                 document.getElementById('addHtml').setAttribute('onclick', "resetImages()");
             }
         }
@@ -1224,7 +1343,17 @@
         });
     </script>
 
+<script>
+    var myJs = document.getElementById("addJs");
 
+    myJs.addEventListener("mouseover", function() {
+        this.style.transform = "scale(1.1)";
+    });
+
+    myJs.addEventListener("mouseout", function() {
+        this.style.transform = "scale(1)";
+    });
+</script>
     <script>
         var size = 4;
         var fieldCells = createField();
