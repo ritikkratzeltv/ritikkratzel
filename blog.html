@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Songti SC;
+            margin: 0 0;
+            padding: 0 0;
+        }
+
+        .head {
+            position: relative;
+            font-size: 3vw;
+            text-align: center;
+            margin: 1vw 0;
+        }
+
+        .blog {
+            position: relative;
+            margin: 0vw 5vw;
+            display: grid;
+            gap: 2vw;
+        }
+
+        .page {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0vw 3vw;
+            border: 0.2vw solid black;
+            padding: 1vw 3vw;
+            border-radius: 1vw;
+        }
+
+        .blogimg {
+            position: relative;
+            align-self: center;
+        }
+
+        .blogimg img {
+            width: 30vw;
+            transition: 0.5s;
+            border-radius: 1vw;
+        }
+
+        .blogimg img:hover {
+            scale: 1.1;
+        }
+
+        .blogtext {
+            position: relative;
+
+
+        }
+
+        .blogtext h1 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2vw;
+            font-weight: normal;
+            margin: 0vw;
+        }
+
+        .blogtext h2 {
+            position: relative;
+            font-size: 1.4vw;
+            font-weight: normal;
+            margin: 0vw;
+        }
+
+        .blogtext h3 {
+            position: relative;
+        }
+
+        .blogtext h3 a {
+            color: black;
+            text-decoration: none;
+            border: 2px solid black;
+            padding: 0vw 1vw;
+            border-radius: 1vw;
+            transition: 1s;
+        }
+
+        .blogtext h3 a:hover {
+            color: blue;
+            background-color: cyan;
+        }
+
+        .sort-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1vw;
+        }
+
+        .sort-btn {
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+            padding: 0.5vw 1vw;
+            margin: 0 0.5vw;
+            cursor: pointer;
+        }
+
+        .sort-btn.active {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        My Blog Page
+    </div>
+    <div class="sort-options">
+        <div class="sort-btn latest" onclick="sortBlogs('latest')">Latest</div>
+        <div class="sort-btn oldest" onclick="sortBlogs('oldest')">Oldest</div>
+    </div>
+    <div class="blog" id="blogContainer">
+        <div class="page">
+            <div class="blogimg">
+                <img src="me.jpg" alt="">
+            </div>
+            <div class="blogtext">
+                <h1>
+                    <p>Episode 4 · Pilot</p>
+                    <p>4th Jan 2024</p>
+                </h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sint iusto inventore nihil impedit
+                    vero, assumenda ex. Error ducimus sed dicta unde magnam aut pariatur quaerat, ex quia, amet cumque!
+                    Pariatur quasi in deleniti illo sequi, sint itaque iure veniam nobis odio magnam ullam laborum!
+                </h2>
+                <h3>
+                    <a href="blog1.html">Read Blog</a>
+                </h3>
+            </div>
+        </div>
+        <div class="page">
+            <div class="blogimg">
+                <img src="me.jpg" alt="">
+            </div>
+            <div class="blogtext">
+                <h1>
+                    <p>Episode 3 · Pilot</p>
+                    <p>3rd Jan 2024</p>
+                </h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis vitae hic non ipsam doloribus fugit
+                    veritatis corrupti provident distinctio suscipit! Reiciendis temporibus repudiandae voluptas
+                    suscipit ut cupiditate. Voluptas, maxime soluta.
+                    Ad, ratione deleniti. Cupiditate sapiente voluptas, deserunt similique illum quisquam sequi id at
+                </h2>
+                <h3>
+                    <a href="blog1.html">Read Blog</a>
+                </h3>
+            </div>
+        </div>
+        <div class="page">
+            <div class="blogimg">
+                <img src="me.jpg" alt="">
+            </div>
+            <div class="blogtext">
+                <h1>
+                    <p>Episode 2 · Pilot</p>
+                    <p>2nd Jan 2024</p>
+                </h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rem officiis, illo laudantium eum
+                    unde quo? Molestiae odit quaerat est, adipisci consectetur ducimus veniam nostrum, dolore harum sunt
+                    impedit modi?
+                    Totam vero recusandae blanditiis id, in dolores error ab repudiandae, minus, molestiae unde nobis
+                </h2>
+                <h3>
+                    <a href="blog1.html">Read Blog</a>
+                </h3>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="blogimg">
+                <img src="me.jpg" alt="">
+            </div>
+            <div class="blogtext">
+                <h1>
+                    <p>Episode 1 · Pilot</p>
+                    <p>1st Jan 2024</p>
+                </h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit aperiam non
+                    voluptate incidunt necessitatibus illo totam et nobis officiis perspiciatis, cum nostrum eius quas
+                    ipsam ex soluta? Fugiat, repellendus.
+                    Maxime ipsa perferendis dicta quaerat tempore, accusamus dolores harum necessitatibus. Nesciunt
+                </h2>
+                <h3>
+                    <a href="blog1.html">Read Blog</a>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        function sortBlogs(option) {
+            var container = document.getElementById('blogContainer');
+            var blogs = Array.from(container.getElementsByClassName('page'));
+            var latestBtn = document.querySelector('.sort-btn.latest');
+            var oldestBtn = document.querySelector('.sort-btn.oldest');
+    
+            // Remove active class from both buttons initially
+            latestBtn.classList.remove('active');
+            oldestBtn.classList.remove('active');
+    
+            if (option === 'oldest' && !oldestBtn.classList.contains('active')) {
+                // Reverse the order of the blogs only if the oldest button is not already active
+                var reversedBlogs = blogs.reverse();
+                container.innerHTML = ''; // Clear the container
+                reversedBlogs.forEach(function (blog) {
+                    container.appendChild(blog);
+                });
+    
+                // Add active class to the oldest button
+                oldestBtn.classList.add('active');
+            } else {
+                // Sort blogs from latest to oldest (default)
+                blogs.sort(function (a, b) {
+                    return a.compareDocumentPosition(b) - 2 * (b.contains(a) ? 1 : 0) + 1;
+                }).forEach(function (blog) {
+                    container.appendChild(blog);
+                });
+    
+                // Add active class to the latest button
+                latestBtn.classList.add('active');
+            }
+        }
+    
+        // Initial sorting when the page loads
+        sortBlogs('latest');
+    </script>
+    
+
+
+</body>
+
+
+</html>
