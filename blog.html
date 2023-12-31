@@ -169,6 +169,26 @@
             background-color: white;
             color: black;
         }
+        .join {
+            position: relative;
+            text-align: center;
+        }
+
+        .join h3 {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            padding: 2vw 0;
+            list-style: circle;
+            margin: 6vw 0 0 0;
+
+        }
+
+        .join h3 li a {
+            color: white;
+            text-decoration: none;
+        }
 
 
         @media (max-width: 650px) {
@@ -275,7 +295,11 @@
                 background-color: white;
                 color: black;
             }
-
+            .join h3 {
+                padding: 4vw 0;
+                justify-content: center;
+                gap: 0 1vw;
+            }
 
 
         }
@@ -285,7 +309,7 @@
 <body>
     <div class="title">
         <div class="logo">
-            <a href="portfolio.html"><img src="logob.png" alt=""></a>
+            <a href="index.html"><img src="logob.png" alt=""></a>
         </div>
         <div class="links">
             <a href="https://www.instagram.com/ritikkratzel/" target="_blank"><img src="instagram.png" alt=""></a>
@@ -384,6 +408,14 @@
                 </h3>
             </div>
         </div>
+    </div>
+    <div class="join">
+        <h3>
+            <li><a href="https://youtube.com/@RitikKratzel?si=I2tJh9jYVDuVeRj3">Youtube</a></li>
+            <li><a href="https://www.instagram.com/ritikkratzel/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61553185520050">Facebook</a></li>
+            <li><a href="https://patreon.com/ritikkratzel">Patreon</a></li>
+        </h3>
     </div>
     <script>
         function toggleSort() {
