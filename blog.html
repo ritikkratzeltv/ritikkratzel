@@ -215,15 +215,24 @@
             .page {
                 gap: 1vw 3vw;
                 border: 0.8vw solid black;
-
+                grid-template-columns: 1fr;
             }
 
 
+            .blogimg {
+                text-align: center;
+            }
 
             .blogimg img {
-                width: 40vw;
+                width: 80vw;
                 transition: 0.5s;
                 border-radius: 1vw;
+            }
+
+            .blogimg img:hover {
+                transform: scale(1.0);
+                border-radius: 1vw;
+                transition: 0.5s;
             }
 
             .blogtext h1 {
@@ -232,12 +241,12 @@
             }
 
             .blogtext h2 {
-                font-size: 2.4vw;
+                font-size: 3vw;
             }
 
 
             .blogtext h3 a {
-                font-size: 2vw;
+                font-size: 3vw;
             }
 
             .blogtext h3 a:hover {
