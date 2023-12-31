@@ -141,6 +141,7 @@
             padding: 0vw 1vw;
             border-radius: 1vw;
             transition: 0.6s;
+            font-size: 1.5vw;
         }
 
         .blogtext h3 a:hover {
@@ -167,6 +168,106 @@
         .sort-btn.active {
             background-color: white;
             color: black;
+        }
+
+
+        @media (max-width: 650px) {
+            body {
+                font-family: cochin;
+                line-height: 5vw;
+            }
+
+            .title {
+                padding: 2vw 0;
+            }
+
+            .logo img {
+                width: 17vw;
+            }
+
+            .links {
+                gap: 1.1vw;
+            }
+
+            .links img {
+                width: 5vw;
+            }
+
+            .cblog {
+                gap: 2vw;
+                right: 2vw;
+            }
+
+            .cblog a {
+                font-size: 3vw;
+                padding: 0.1vw 1.1vw;
+            }
+
+            .head {
+                font-size: 5vw;
+                margin: 3vw 0;
+            }
+
+            .blog {
+                margin: 3vw 5vw;
+            }
+
+            .page {
+                gap: 1vw 3vw;
+                border: 0.8vw solid black;
+
+            }
+
+
+
+            .blogimg img {
+                width: 40vw;
+                transition: 0.5s;
+                border-radius: 1vw;
+            }
+
+            .blogtext h1 {
+                font-size: 4vw;
+
+            }
+
+            .blogtext h2 {
+                font-size: 2.4vw;
+            }
+
+
+            .blogtext h3 a {
+                font-size: 2vw;
+            }
+
+            .blogtext h3 a:hover {
+                color: white;
+                background-color: black;
+            }
+
+            .sort-options {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1vw;
+            }
+
+            .sort-btn {
+                background-color: transparent;
+                border: 2px solid black;
+                color: white;
+                background-color: black;
+                padding: 0.5vw 1vw;
+                margin: 0 0.5vw;
+                cursor: pointer;
+            }
+
+            .sort-btn.active {
+                background-color: white;
+                color: black;
+            }
+
+
+
         }
     </style>
 </head>
