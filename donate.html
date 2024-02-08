@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Songti SC;
+            margin: 0 0;
+            padding: 0 0;
+        }
+        .none{
+            position: relative;
+            text-align: center;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 1vw 0;
+        }
+
+        .logo {
+            position: relative;
+        }
+
+        .logo img {
+            width: 10vw;
+        }
+
+        .links {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+
+        .links img {
+            width: 2.2vw;
+        }
+      . donate{
+        position: relative;
+        text-align: cener;
+      }
+      .donate p{
+        font-size: 2vw;
+      }
+      .donate img{
+        width: 70vw;
+      }
+      }
+      @media (max-width: 650px) {
+            body {
+                font-family: cochin;
+                line-height: 5vw;
+                overflow-x: hidden;
+            }
+
+            .title {
+                padding: 2vw 0;
+            }
+
+            .logo img {
+                width: 17vw;
+            }
+
+            .links {
+                gap: 1.1vw;
+            }
+
+            .links img {
+                width: 5vw;
+            }
+        . donate{
+        position: relative;
+        text-align: cener;
+      }
+      .donate p{
+        font-size: 3vw;
+      }
+      .donate img{
+        width: 70vw;
+      }
+      }
+      </style>
+</head>
+
+<body>
+    <div class="title">
+        <div class="logo">
+            <a href="index.html"><img src="logob.png" alt=""></a>
+        </div>
+        <div class="links">
+            <a href="https://www.instagram.com/ritikkratzel/" target="_blank"><img src="instagram.png" alt=""></a>
+
+            <a href="https://youtube.com/@RitikKratzel?si=I2tJh9jYVDuVeRj3" target="_blank"><img src="youtube.png"
+                    alt=""></a>
+
+            <a href="https://www.facebook.com/profile.php?id=61553185520050" target="_blank"><img src="facebook.png"
+                    alt=""></a>
+        </div>
+
+        <div class="cblog">
+            <a href="blog.html">Blog</a>
+            <a href="donate.html">Donate</a>
+        </div>
+    </div>
+  <div class="donate">
+    <p>You can donate through this qr code or this UPI Id
+  <br>ritikkratzelofficial@okhdfcbank</p>
+  <img src="qr.jpg"></img>
+  </div>
+
+  <div class="join">
+        <h3>
+            <li><a href="https://youtube.com/@RitikKratzel?si=I2tJh9jYVDuVeRj3">Youtube</a></li>
+            <li><a href="https://www.instagram.com/ritikkratzel/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61553185520050">Facebook</a></li>
+            <li><a href="https://patreon.com/ritikkratzel">Patreon</a></li>
+        </h3>
+    </div>
+    <script>
+        function toggleSort() {
+            var container = document.getElementById('blogContainer');
+            var blogs = Array.from(container.getElementsByClassName('page'));
+            var sortBtn = document.querySelector('.sort-btn');
+
+            // Toggle active class
+            sortBtn.classList.toggle('active');
+
+            // Reverse the order of the blogs
+            blogs.reverse();
+            container.innerHTML = ''; // Clear the container
+            blogs.forEach(function (blog) {
+                container.appendChild(blog);
+            });
+        }
+
+        // Initial sorting when the page loads
+        toggleSort();
+    </script>
+
+</body>
+
+
+</html>
