@@ -3,30 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Kratzel</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-
+    <title>Home</title>
     <style>
         body {
             padding: 0 0;
-            font-family: Songti Sc;
             margin: 0 0;
-
+            font-family: Songti Sc;
         }
 
-        .title {
+        .navbar {
             position: relative;
-            text-align: center;
             display: flex;
-            justify-content: space-between;
             background-color: black;
-            padding: 1vw 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw 1vw;
         }
 
         .logo {
@@ -37,469 +29,368 @@
             width: 10vw;
         }
 
-        .links {
+        nav {
             position: relative;
             display: flex;
-            align-items: center;
-            gap: 1vw;
+            gap: 1.5vw;
         }
 
-        .links img {
-            width: 2.2vw;
-        }
-
-        .blog {
+        nav li {
             position: relative;
-            font-size: 1.5vw;
-            align-self: center;
-            right: 1vw;
-            display: flex;
-            gap: 1vw;
         }
 
-        .blog a {
-            border: 2px solid white;
-            border-radius: 0.9vw;
-            padding: 0.08vw 0.9vw;
-            color: white;
+        nav li a {
             text-decoration: none;
+            color: white;
+            font-size: 1.3vw;
+        }
+
+        .fuel {
+            position: relative;
+            color: white;
+            border: 2px solid white;
+            padding: 0.7vw 1.5vw;
+            font-size: 1.5vw;
+            border-radius: 2vw;
             background: linear-gradient(to right, black 50%, white 50%);
             background-size: 200% 100%;
             transition: background-position 0.5s, color 0.5s;
         }
 
-        .blog a:hover {
+        .fuel:hover {
             background-position: -100% 0;
             color: black;
         }
 
-        .what {
+        .hero {
             position: relative;
-            margin: 1vw 5vw;
+            text-align: center;
+            padding: 0vw 0;
+        }
+
+        .hero img {
+            width: 100vw;
+            border: 0.5px solid black;
+            border-radius: 1px;
+
+        }
+
+        .herotext {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .herotext p {
+            font-size: 1.5vw;
+            font-weight: bold;
         }
 
         .intro {
             position: relative;
             display: flex;
+            margin: 3.5vw 3vw;
+            justify-content: center;
             gap: 5vw;
-            margin: 3vw 0 0 0;
-
-        }
-
-        .journey {
-            position: relative;
-            display: flex;
-            gap: 5vw;
-
-        }
-
-        #txt1 {
-            animation: slideR 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        #txt2 {
-            animation: slideL 1s ease-in-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes slideR {
-            from {
-                opacity: 0;
-                transform: translateX(-100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideL {
-            from {
-                opacity: 0;
-                transform: translateX(100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-
-        .txt {
-            position: relative;
-            align-self: center;
-        }
-
-        .txt h1 {
-            font-size: 1.8vw;
-            font-weight: normal;
-        }
-
-        .txt h2 {
-            font-size: 1.4vw;
-            font-weight: normal;
         }
 
         .intro img {
-            width: 30vw;
-            animation: slideD 1s ease-in-out forwards;
-            opacity: 0;
+            width: 37vw;
+            border-radius: 1vw
         }
 
-        .journey img {
-            width: 30vw;
-            animation: slideU 1s ease-in-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes slideU {
-            from {
-                opacity: 0;
-                transform: translateY(100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideD {
-            from {
-                opacity: 0;
-                transform: translateY(-100%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-
-        .why {
+        .introtext {
             position: relative;
-            padding: 2vw 0;
-            margin: 2vw 0;
-            background: linear-gradient(to bottom, white 50%, black 50%);
-            background-size: 100% 200%;
-            transition: background-position 0.5s, color 0.7s;
+            text-align: center;
         }
 
-        .why:hover {
-            background-position: 0 100%;
-            color: white;
-        }
-
-
-        .support a {
+        .introtext h1 {
             position: relative;
-            color: white;
-            text-decoration: none;
-            border: 2px solid white;
-            padding: 0vw 1vw;
-            border-radius: 0.8vw;
-            transition: 1s;
+            font-size: 2.2vw;
+        }
+
+        .introtext h2 {
+            font-size: 1.6vw;
+            font-weight: normal;
+        }
+
+        .partners {
+            position: relative;
+            text-align: center;
+        }
+
+        .partners h1 {
             font-size: 2.3vw;
-            background: linear-gradient(to right, #2196F3 50%, white 50%);
-            /* Gradient from left to right */
-            background-size: 200% 100%;
-            /* Background size for transition effect */
-            transition: background-position 0.5s, color 0.5s;
-            /* Added transition for background position and text color */
         }
 
-        .support a:hover {
+
+        .sponsors {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 2vw 0;
+        }
+
+        .sponsors img {
+            width: 10vw;
+            border-radius: 5vw;
+        }
+
+        .sponsors p {
+            font-size: 1.3vw;
+        }
+
+        .partners p {
+            position: relative;
+            text-align: center;
+            font-size: 1.3vw;
+            margin: 0vw 13vw;
+        }
+
+        .link {
+            position: relative;
+            margin: 2vw 0;
+        }
+
+        .link a {
+            color: white;
+            border-radius: 3vw;
+            text-decoration: none;
+            padding: 0.7vw 1.3vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+            font-size: 1.1vw;
+        }
+
+        .link a:hover {
             background-position: -100% 0;
             color: black;
             border: 2px solid black;
+
         }
 
-        .dreams {
-            position: relative;
-            text-align: center;
-            margin: 0 10vw;
-        }
-
-        .dreams h1 {
-            font-size: 2.8vw;
-            font-weight: normal;
-        }
-
-        .dreams h2 {
-            font-size: 1.7vw;
-            font-weight: normal;
-        }
-
-        .support {
+        .skateacrossindia {
             position: relative;
             text-align: center;
             margin: 3vw 0;
         }
 
-        .support h1 {
-            font-size: 2.8vw;
-            font-weight: normal;
+        .skateacrossindia h1 {
+            font-size: 2vw;
+
         }
 
-        .support h2 {
-            font-size: 1.7vw;
-            font-weight: normal;
-            margin: 0vw 10vw 3vw 10vw;
+        .skatesummary {
+            position: relative;
         }
 
-        .join {
+        .skatesummary img {
+            height: 15vw;
+        }
+
+        .skatesummary p {
+            font-size: 1.2vw;
+            margin: 1vw 5vw;
+        }
+
+        .aboutme {
+            position: relative;
+            margin: 3vw 7vw;
+            display: flex;
+            justify-self: center;
+            gap: 5vw;
+        }
+
+        .aboutme h1 {
+            font-size: 2vw;
+        }
+
+        .aboutme img {
+            width: 28vw;
+        }
+
+        .aboutsummary {
+            position: relative;
+
+        }
+
+        .aboutsummary p {
+            font-size: 1.2vw;
+        }
+
+        .follow {
             position: relative;
             text-align: center;
+            margin: 3vw 15+vw;
         }
 
-        .join h1 {
-            font-size: 2.5vw;
-            font-weight: normal;
+        .follow h1 {
+            font-size: 2vw;
         }
 
-        .join h2 {
-            font-size: 1.5vw;
-            font-weight: normal;
-            margin: 0 5vw;
+        .follow p {
+            font-size: 1.3vw;
         }
 
-        .join h3 {
+        .footer {
+            position: relative;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.7vw 0;
+
+        }
+
+        .footer img {
+            align-items: center;
+        }
+
+        .social {
             position: relative;
             display: flex;
-            justify-content: space-evenly;
-            background-color: black;
-            padding: 2vw 0;
-            list-style: circle;
-            margin: 5vw 0 0 0;
-
+            gap: 0.5vw;
+            align-items: center;
         }
 
-        .join h3 li a {
+        .social img {
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .social a {
+            position: relative;
             color: white;
+            font-size: 1.8w;
+            align-items: center;
             text-decoration: none;
         }
-
-        @media (max-width: 650px) {
-            body {
-                font-family: cochin;
-                line-height: 5vw;
-                overflow-x: hidden;
-            }
-
-            .title {
-                padding: 2vw 0;
-            }
-
-            .logo img {
-                width: 17vw;
-            }
-
-            .links {
-                gap: 1.1vw;
-            }
-
-            .links img {
-                width: 5vw;
-            }
-
-            .blog {
-                gap: 2vw;
-                right: 2vw;
-            }
-
-            .blog a {
-                font-size: 3vw;
-                padding: 0.1vw 1.1vw;
-            }
-
-            .intro {
-                flex-direction: column-reverse;
-                gap: 2vw 0;
-                align-items: center;
-                margin: 7vw 0;
-
-            }
-
-            .intro img {
-                width: 85vw;
-            }
-
-            .txt h1 {
-                font-size: 4.5vw;
-                text-align: center;
-            }
-
-            .txt h2 {
-                font-size: 3.5vw;
-                text-align: center;
-            }
-
-            .journey {
-                display: grid;
-                place-items: center;
-
-            }
-
-            .journey img {
-                width: 85vw;
-            }
-
-            .dreams {
-                margin: 0 5vw;
-            }
-
-            .dreams h1 {
-                font-size: 5vw;
-            }
-
-            .dreams h2 {
-                font-size: 3.5vw;
-            }
-
-            .support {
-                margin: 5vw 0;
-            }
-
-            .support h1 {
-                font-size: 5vw;
-            }
-
-            .support h2 {
-                font-size: 3.5vw;
-                margin: 4vw 4vw;
-            }
-
-            .support a {
-                font-size: 5vw;
-                border-radius: 2vw;
-                margin: 2vw 0;
-            }
-
-            .join h1 {
-                font-size: 4.5vw;
-            }
-
-            .join h2 {
-                font-size: 3.5vw;
-            }
-
-            .join h3 {
-                padding: 4vw 0;
-                justify-content: center;
-                gap: 0 1vw;
-            }
-
-        }
     </style>
-
 </head>
 
 <body>
-    <div class="title">
+    <div class="navbar">
         <div class="logo">
-            <a href="index.html"><img src="logob.png" alt=""></a>
+            <img src="logob.png" alt="">
         </div>
-        <div class="links">
-            <a href="https://www.instagram.com/ritikkratzel/" target="_blank"><img src="instagram.png" alt=""></a>
-
-            <a href="https://youtube.com/@RitikKratzel?si=I2tJh9jYVDuVeRj3" target="_blank"><img src="youtube.png"
-                    alt=""></a>
-
-            <a href="https://www.facebook.com/profile.php?id=61553185520050" target="_blank"><img src="facebook.png"
-                    alt=""></a>
-        </div>
-
-        <div class="blog">
-            <a href="blog.html">Blog</a>
-            <a href="donate.html">Donate</a>
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collabs.html">Collabs</a></li>
+            <li><a href="skateacrossindia.html">Skate Across India</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="origins.html">Origin</a></li>
+        </nav>
+        <div class="fuel">
+            Fuel My Adventures
         </div>
     </div>
-    <div class="what">
-        <div class="intro">
-            <div class="txt" id="txt1">
-                <h1>Hi! I'm Ritik Kratzel</h1>
-                <h2>Usually a web developer, but right now, I've hit pause on coding to embark on an extraordinary
-                    100-day
-                    journey. My skateboard and I are cruising from the Himalayan heights of Manali to the southern
-                    shores of
-                    Kanyakumari, covering around 4000 kilometers. Come along as I soak in the beauty, embrace diverse
-                    cultures,
-                    and share every thrilling experience. Let's share this amazing journey together!</h2>
-            </div>
-            <img src="me.jpg" alt="">
-        </div>
-        <div class="journey">
-            <img src="map.png" alt="">
-            <div class="txt" id="txt2">
-                <h1>Journey Details</h1>
-                <h2>Starting from the majestic hills of Manali on 1st Jan 2024, I'll be embarking on a daily journey of
-                    around 40
-                    kilometers,
-                    cruising through the heart of India. Over the course of 100 days, my skateboard and I will traverse
-                    11
-                    states, immersing ourselves in the diverse landscapes and rich cultures that make India truly
-                    extraordinary.
-                    The states on my route include Himachal Pradesh, Punjab, Haryana, Rajasthan, Madhya
-                    Pradesh,
-                    Gujarat, Maharashtra, Goa, Karnataka, Kerala, and Tamil Nadu. Join me as I explore, adapt, and share
-                    the
-                    unique experiences each state has to offer!</h2>
-            </div>
+
+    <div class="hero">
+        <img src="HeroPic.jpg" alt="">
+        <div class="herotext">
+            <p>Explorer</p>
+            <p>Skateboarder</p>
+            <p>Storyteller</p>
         </div>
     </div>
-    <div class="why">
-        <div class="dreams">
-            <h1>A Personal Message</h1>
-            <h2> I really have no idea how this trip is going to end. Not sure how I'll survive the coming 100 days. I am aware of the risks of getting robbed, getting hit, or facing some unfortunate events. In addition, I’m a cold-blooded animal who has serious issues with heat and a fear of dogs chasing me, which I know will happen. But, what to do? I can't just sit and watch TV and daydream all my life. I want to break out of my comfort zone, explore the unexplored (at least by me!) parts of India, and eventually venture into other parts of the world. While not my original goal, I also hope to inspire others, spread joy through the art of skateboarding, ignite passion, and showcase the sheer enjoyment of the sport. Through this expedition, I want to convey the message that no dream is too big. Everything is possible! I really hope that soon I won’t just be writing these ideas on a page, but will actually have accomplished something. 
-
-                <br> <i>P.S. See Daydreaming. Again"</i>
+    <div class="intro">
+        <div class="introtext">
+            <h1>
+                HI! I'm Ritik Kratzel
+            </h1>
+            <h2>
+                A long-distance skateboarder and advventurer from India. I have skated across the country, from
+                Leh to Kanniyakumari covering 4000 kilometers of distance in 99 Days, but my journey doesn't stop there.
+                I'm
+                passionate about pushing boundaries, sharing stories, connecting with people and always dreaming big.
             </h2>
         </div>
-        <div class="support">
-            <h1>Help out a Friend</h1>
-            <h2>While I navigate this solo expedition, your donations transform you from a spectator to an integral part
-                of
-                the journey. Join me in making this 100-day adventure not just mine but ours. Your support sustains
-                every
-                push on the skateboard, ensures there's a roof over my head, and meals to fuel this journey. Together,
-                let's
-                make this experience truly collective and unforgettable, exploring new landscapes and sharing every
-                story
-                along the way.</h2>
-            <a href="donate.html">Donate Now</a>
+        <img src="me.jpg" alt="">
+    </div>
+    <div class="partners">
+        <h1>Partners in Adventure</h1>
+        <div class="sponsors">
+            <div class="partnersimg">
+                <img src="landyachtz.jpg" alt="">
+                <p>Landyachtz</p>
+            </div>
+            <div class="partnersimg">
+                <img src="nomore.jpg" alt="">
+                <p>No More</p>
+            </div>
+            <div class="partnersimg">
+                <img src="foxyroks.jpg" alt="">
+                <p>Foxyroks</p>
+            </div>
         </div>
+        <p>My skateboarding journey has not only introduced me to incredible people but also connected me with amazing
+            brands that share my passion for adventure. From a leading skateboard brand to a unique skate jewelry
+            brand
+            and even a zero-waste bag brand, these partners support my jouney and fuel my ambitions.
+        </p>
+        <div class="link"><a href="collabs.html">Know More</a></div>
+
+    </div>
+    <div class="skateacrossindia">
+        <h1>Skate Across India</h1>
+        <div class="skatesummary">
+            <img src="HeroPic.jpg" alt="">
+            <p> During my solo skateboarding journey from the mountains of Manali to the southernmost tip of India in
+                Kanyakumari, I had no idea what I’d encounter. But what I found was a world of kindness. Within days,
+                strangers welcomed me with open arms—shopkeepers, police officers, and even politicians invited me into
+                their homes, treating me like family.
+
+                On the road, I was often handed local snacks, from piping hot chai to fresh fruits and street food,
+                which fueled my days. Of course, the journey had its fair share of challenges: scorching heat,
+                rough
+                roads, and relentless dogs that seemed to appear at every corner. Yet, every struggle only made the
+                experience more unforgettable. I wouldn’t change a single moment.
+            </p>
+        </div>
+        <div class="link"> <a href="skateacrossindia.html">Read more </a></div>
+    </div>
+    <div class="aboutme">
+        <div class="aboutsummary">
+            <h1>Life Off the Board</h1>
+            <p>
+                When I'm not skateboarding or traveling, you'll likely find me at home, either watching TV, working on
+                interior designs for my future dream home, or picking up something new to learn. I’m also a web
+                developer, and I enjoy exploring the town with friends. Beyond that, I’m a speedcuber and an avid
+                stargazer, always fascinated by the night sky. </p>
+            <div class="link"><a href="about.html">Who AM I?</a></div>
+        </div>
+        <img src="me.jpg" alt="">
+    </div>
+    <div class="follow">
+        <h1>Follow The Journey</h1>
+        <p>
+            I’ve documented my entire adventure and share it across my social media platforms, along with occasional
+            travel reels with friends. You can support me by following my journey or by fueling my future trips through
+            donations or sponsorships. </p>
+        <div class="link"><a href="donate.html">Sponsor Me!</a></div>
+    </div>
+    <div class="highlights">
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+    </div>
+    <div class="footer">
+        <div class="social">
+            <a href="">Youtube </a>
+            <img src="youtube.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Instagram </a>
+            <img src="instagram.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Facebook </a>
+            <img src="facebook.png" alt="">
+        </div>
+
     </div>
 
-    <div class="join">
-        <h1>Join The Ride</h1>
-        <h2>Every day, I'll be sharing my journey through various platforms. Expect a daily YouTube video capturing the
-            essence of each day, complemented by a reel on Instagram for a glimpse of
-            the day's adventure. But that's not all—dive deeper into each day's experience with detailed blogs, where
-            you can find location specifics and additional information. Be a part of the daily updates, stories, and the
-            evolving adventure as I navigate this 100-day expedition."</h2>
-        <h3>
-            <li><a href="https://youtube.com/@RitikKratzel?si=I2tJh9jYVDuVeRj3">Youtube</a></li>
-            <li><a href="https://www.instagram.com/ritikkratzel/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61553185520050">Facebook</a></li>
-            <li><a href="https://patreon.com/ritikkratzel">Patreon</a></li>
-        </h3>
-    </div>
+
 </body>
-<script>
-    // Add this script where appropriate
-    document.addEventListener('DOMContentLoaded', function () {
-        const introSection = document.querySelector('.intro');
-        const journeySection = document.querySelector('.journey');
-
-        introSection.classList.add('show');
-        journeySection.classList.add('show');
-    });
-
-</script>
 
 </html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ritik Kratzel</title>
+    <style>
+       body {
+            padding: 0 0;
+            margin: 0 0;
+            font-family: Songti Sc;
+        }
+
+        .navbar {
+            position: relative;
+            display: flex;
+            background-color: black;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw 1vw;
+        }
+
+        .logo {
+            position: relative;
+        }
+
+        .logo img {
+            width: 10vw;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            gap: 1.5vw;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3vw;
+        }
+
+        .fuel {
+            position: relative;
+            color: white;
+            border: 2px solid white;
+            padding: 0.7vw 1.5vw;
+            font-size: 1.5vw;
+            border-radius: 2vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        .fuel:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .me {
+            position: relative;
+            text-align: center;
+        }
+
+        .me img {
+            width: 60vw;
+        }
+
+        .me p {
+            font-size: 1.5vw;
+            margin: 0vw 2vw;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            font-size: 2vw;
+            margin: 3vw 0;
+            font-weight: bold;
+        }
+
+        .friends {
+            position: relative;
+            text-align: center;
+        }
+
+        .friends img {
+            width: 60vw;
+        }
+
+        .friends p {
+            font-size: 1.5vw;
+        }
+
+        .web {
+            position: relative;
+            margin: 0vw 5vw;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            text-align: center;
+        }
+
+
+
+        .web p {
+            font-size: 1.5vw;
+        }
+
+        .portimg {
+            position: relative;
+            text-align: center;
+        }
+
+        .portimg img {
+            width: 29vw;
+            border-radius: 12vw;
+        }
+
+        #portimg2 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .game {
+            position: relative;
+        }
+
+        .cell {
+            width: 6vw;
+            height: 6vw;
+            border: 1px solid;
+            border-radius: 0.3vw;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1vw;
+            position: relative;
+        }
+
+        #field {
+            position: relative;
+            text-align: center;
+        }
+
+        #scramble-button {
+            text-align: center;
+            position: relative;
+            margin: 1vw 10vw;
+            font-size: 1vw;
+        }
+
+        #win {
+            text-align: center;
+            font-size: 2vw;
+            font-weight: bold;
+            display: none;
+            color: red;
+            background-color: #08FDD8;
+        }
+
+        .cube {
+            position: relative;
+            display: flex;
+            margin: 0vw 5vw;
+            gap: 0vw 5vw;
+        }
+
+        .cube p {
+            font-size: 1.5vw;
+        }
+
+        .cube video {
+            width: 35vw;
+        }
+
+        .starry {
+            position: relative;
+            display: flex;
+            margin: 0vw 5vw;
+            gap: 0vw 5vw;
+        }
+
+        .starry p {
+            font-size: 1.5vw;
+        }
+
+        .starry img {
+            width: 35vw;
+        }
+
+        .footer {
+            position: relative;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.9vw 0;
+            margin: 5vw 0 0 0;
+        }
+
+        .footer img {
+            align-items: center;
+        }
+
+        .social {
+            position: relative;
+            display: flex;
+            gap: 0.5vw;
+            align-items: center;
+        }
+
+        .social img {
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .social a {
+            position: relative;
+            color: white;
+            font-size: 1.8w;
+            align-items: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logob.png" alt="">
+        </div>
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collabs.html">Collabs</a></li>
+            <li><a href="skateacrossindia.html">Skate Across India</a></li>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="origins.html">Origin</a></li>
+        </nav>
+        <div class="fuel">
+            Fuel My Adventures
+        </div>
+
+    </div>
+    <div class="me">
+        <img src="myself.jpg" alt="">
+        <p> I'm Ritik Kratzel, and I'm 21 years old. I was born and raised in Manali, Himachal Pradesh, India. My whole
+            life, I have been surrounded by the snow-capped mountains. While I love my hometown, I have a strong desire
+            to explore other parts of the world, with New Zealand being top on my list, with its stunning natural beauty
+            and abundance of tiny houses that I dream of building myself. This daydreaming happens when I'm lying in my
+            room in front of the TV, which is my favorite thing in the world. I can never get tired of it. But lately,
+            we haven't been spending quality time like we used to, with hours, days, and weeks of binge-watching movies
+            and series. But when all this does not happen and I'm out of the house under the sun, it's mostly when I
+            hang out with my friends.
+        </p>
+    </div>
+    <div class="title">Friends and Adventures</div>
+    <div class="friends">
+        <p>Mostly, it's just me and my best friend Pradeep, who are in search of adventure in Manali. We both have
+            nothing specific to do, which leads us to engage in unnecessary activities and travel distances for no
+            reason. However, we excel at discovering hidden spots and exploring the beauty around us. For the last seven
+            years, we’ve discussed starting a business multiple times, meeting to plan, but we have yet to succeed.
+            Other than him, I have many friends with whom I travel and meet, along with college friends who have become
+            lifelong companions.</p>
+        <img src="" alt="">
+    </div>
+    <div class="title">Web Development</div>
+    <div class="web">
+        <div class="portimg" id="portimg2">
+            <div class="game">
+                <table id="field" style="border: 1px solid black"></table>
+            </div>
+        </div>
+        <p> I'm also a web developer. Initially interested in hacking, I bought a Raspberry Pi, but ARM architecture
+            presented challenges, and destiny had other plans. I stumbled upon a YouTube HTML tutorial, and soon after,
+            my brother and his business partner needed a web developer. I joined them with my basic knowledge and
+            learned through hands-on experience, building websites using HTML, CSS, JavaScript, and PHP. Since
+            then,
+            I've worked on both front-end and back-end development, server management, and problem-solving, consistently
+            expanding my skills and delivering quality results. <br>
+            <button id="scramble-button">Start The Game</button>
+
+        </p>
+    </div>
+    <div class="title">Cubing Enthusiast</div>
+    <div class="cube">
+        <p>I’m passionate about solving Rubik's cubes and have spent eight years honing my skills. My average solving
+            time for the standard 3x3 cube is under 20 seconds. I’ve also explored various cube puzzles, including the
+            2x2, 4x4, and 5x5 cubes, as well as the Megaminx, Pyraminx, Skewb, and Mirror Cube. I even ventured into
+            teaching cubing through a YouTube channel, where I created instructional videos. While the channel didn’t
+            fully take off due to life’s unpredictability, I’ve always kept the possibility of a revival in mind. Who
+            knows, maybe one day I'll start again.</p>
+        <video src="rubiks.mov" controls></video>
+
+
+    </div>
+    <div class="title">Starry Scars, Flawed Artistry</div>
+    <div class="starry">
+        <img src="starryscars.jpg" alt="">
+        <p>Ever since I was a little boy, I’ve dreamed of becoming an astronaut and exploring space. Back in school, I
+            had a plan, but life had other ideas. Now, at 21, my top goal is still to go to space. I know it’s not the
+            usual way, but I’m on a path to becoming a successful entrepreneur. Maybe I’ll earn enough for a space
+            ticket, or perhaps, just maybe, I’ll get the chance to befriend someone like Elon Musk, who might say, “Come
+            on, let’s go!” These are the dreams of a 21-year-old, still reaching for the stars.</p>
+    </div>
+    <div class="footer">
+        <div class="social">
+            <a href="">Youtube </a>
+            <img src="youtube.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Instagram </a>
+            <img src="instagram.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Facebook </a>
+            <img src="facebook.png" alt="">
+        </div>
+
+    </div>
+</body>
+<script>
+    var size = 4;
+    var fieldCells = createField();
+    var values;
+    var emptyX, emptyY;
+    var LEFT = { dx: -1, dy: 0 };
+    var RIGHT = { dx: 1, dy: 0 };
+    var UP = { dx: 0, dy: -1 };
+    var DOWN = { dx: 0, dy: 1 };
+
+    // Define your custom text for each tile
+    var customTexts = [
+        "HTML 1",
+        "CSS 2",
+        "JS 3",
+        "PHP 4",
+        "LINUX 5",
+        "UI/UX 6",
+        "MYSQL 7",
+        "VPS 8",
+        "GIT 9",
+        "NGNIX 10",
+        "APACHE 11",
+        "WIX 12",
+        "PHONE 13",
+        "AI 14",
+        "PYTHON 15",
+        "" // Empty cell
+    ];
+
+    var customColors = [
+        "#a5c7c7",
+        "#a5c7c7",
+        "#a5c7c7",
+        "#a5c7c7",
+        "#6e8ff2",
+        "#6e8ff2",
+        "#6e8ff2",
+        "#6e8ff2",
+        "#dfc822",
+        "#dfc822",
+        "#dfc822",
+        "#dfc822",
+        "#FF9999",
+        "#FF9999",
+        "#FF9999",
+        "white" // Empty cell color
+    ];
+
+    function createField() {
+        var cells = [];
+        var table = document.getElementById('field');
+        for (var y = 0; y < size; y++) {
+            var tr = document.createElement('tr');
+            table.appendChild(tr);
+            var rowCells = [];
+            cells.push(rowCells);
+            for (var x = 0; x < size; x++) {
+                var td = document.createElement('td');
+                td.setAttribute('class', 'cell');
+                td.textContent = ''; // Initialize with no text
+                tr.appendChild(td);
+                rowCells.push(td);
+            }
+        }
+        return cells;
+    }
+
+    function createInitialValues() {
+        emptyX = emptyY = size - 1;
+        var v = [];
+        var i = 0;
+        for (var y = 0; y < size; y++) {
+            var rowValues = [];
+            v.push(rowValues);
+            for (var x = 0; x < size; x++) {
+                rowValues.push(customTexts[i]);
+                i++;
+            }
+        }
+        v[emptyY][emptyX] = ''; // Empty cell
+        return v;
+    }
+
+    function draw() {
+        // Set a specific background color for the empty cell
+        fieldCells[emptyY][emptyX].style.backgroundColor = customColors[customTexts.length - 1];
+
+        for (var y = 0; y < size; y++) {
+            for (var x = 0; x < size; x++) {
+                var v = values[y][x];
+                var td = fieldCells[y][x];
+                td.textContent = v;
+                var colorIndex = customTexts.indexOf(v); // Find the index of text
+                if (colorIndex !== -1) {
+                    td.style.backgroundColor = customColors[colorIndex]; // Set the background color
+                }
+            }
+        }
+    }
+
+
+    function makeMove(move) {
+        var newX = emptyX + move.dx, newY = emptyY + move.dy;
+        if ((newX >= size) || (newX < 0) ||
+            (newY >= size) || (newY < 0)
+        ) {
+            return false;
+        }
+        var c = values[newY][newX];
+        values[newY][newX] = 0;
+        values[emptyY][emptyX] = c;
+        emptyX = newX;
+        emptyY = newY;
+        return true;
+    }
+
+    function shuffle() {
+        var options = [LEFT, RIGHT, UP, DOWN];
+        var iterations = 5;
+        for (var i = 0; i < iterations; i++) {
+            var move = options[Math.floor(Math.random() * options.length)];
+            makeMove(move);
+        }
+    }
+
+    function gameOver() {
+        var expectedValue = 1;
+        for (var y = 0; y < size; y++) {
+            for (var x = 0; x < size; x++) {
+                if (values[y][x] === expectedValue) {
+                    expectedValue++;
+                } else {
+                    if (x === size - 1 && y === size - 1 && values[y][x] === 0) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    function handleTileClick(tile, x, y) {
+        if (x === emptyX && y === emptyY) {
+            return; // Clicked on an empty cell, do nothing
+        }
+
+        // Check if the clicked tile is adjacent to the empty cell
+        if (
+            (x === emptyX && Math.abs(y - emptyY) === 1) ||
+            (y === emptyY && Math.abs(x - emptyX) === 1)
+        ) {
+            var move = { dx: x - emptyX, dy: y - emptyY };
+            if (makeMove(move)) {
+                draw();
+                if (gameOver()) {
+                    setTimeout(function () {
+                        alert('Game over, you won!');
+                        init();
+                    }, 1000);
+                }
+            }
+        }
+    }
+
+    // Add click event listeners to each cell
+    for (var y = 0; y < size; y++) {
+        for (var x = 0; x < size; x++) {
+            fieldCells[y][x].addEventListener('click', (function (x, y) {
+                return function () {
+                    handleTileClick(this, x, y);
+                };
+            })(x, y));
+        }
+    }
+
+    function init() {
+        values = createInitialValues();
+        shuffle();
+        draw();
+    }
+
+
+    init();
+
+    // Function to scramble the puzzle more thoroughly
+    function scramblePuzzle() {
+        var numMoves = 100; // Adjust the number of moves as needed
+        for (var i = 0; i < numMoves; i++) {
+            var options = [LEFT, RIGHT, UP, DOWN];
+            var move = options[Math.floor(Math.random() * options.length)];
+            makeMove(move);
+        }
+        draw();
+    }
+
+
+
+    document.getElementById('scramble-button').addEventListener('click', function () {
+        scramblePuzzle(); // Scramble the puzzle with more moves
+        document.getElementById('win-message').style.display = 'none'; // Hide the win message when scrambled
+    });
+
+    function showWinMessage() {
+        document.getElementById('win-message').style.display = 'block';
+    }
+
+    function checkWin() {
+        var expectedValue = 1;
+        for (var y = 0; y < size; y++) {
+            for (var x = 0; x < size; x++) {
+                if (values[y][x] === expectedValue) {
+                    expectedValue++;
+                } else {
+                    if (x === size - 1 && y === size - 1 && values[y][x] === '') {
+                        showWinMessage();
+                        return;
+                    }
+                    return;
+                }
+            }
+        }
+    }
+
+    // Add click event listeners to each cell
+    for (var y = 0; y < size; y++) {
+        for (var x = 0; x < size; x++) {
+            fieldCells[y][x].addEventListener('click', (function (x, y) {
+                return function () {
+                    handleTileClick(this, x, y);
+                };
+            })(x, y));
+        }
+    }
+</script>
+
+</html>

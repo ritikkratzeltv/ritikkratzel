@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabs</title>
+    <style>
+        body {
+            padding: 0 0;
+            margin: 0 0;
+            font-family: Songti Sc;
+        }
+
+        .navbar {
+            position: relative;
+            display: flex;
+            background-color: black;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1vw 1vw;
+        }
+
+        .logo {
+            position: relative;
+        }
+
+        .logo img {
+            width: 10vw;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            gap: 1.5vw;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3vw;
+        }
+
+        .fuel {
+            position: relative;
+            color: white;
+            border: 2px solid white;
+            padding: 0.7vw 1.5vw;
+            font-size: 1.5vw;
+            border-radius: 2vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        .fuel:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .collabs {
+            position: relative;
+            margin: 2vw 5vw;
+        }
+
+        .landyachtz {
+            position: relative;
+            text-align: center;
+            margin: 2vw 0 4vw 0;
+        }
+
+        .landyachtz img {
+            height: 18vw;
+            border: 0.25vw solid black;
+            padding: 0.2vw;
+        }
+
+        .landyachtz h1 {
+            font-size: 2vw;
+        }
+
+        .landyachtz p {
+            font-size: 1.3vw;
+            margin: 0vw 10vw;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            margin: 2vw 0;
+        }
+
+        .title h1 {
+            font-size: 2vw;
+        }
+
+        .nomore {
+            position: relative;
+            display: flex;
+            margin: 3.5vw 2vw;
+            justify-content: center;
+            gap: 5vw;
+            align-items: center;
+        }
+
+        .nomore img {
+            height: 10vw;
+            border: 0.25vw solid black;
+            padding: 0.2vw;
+        }
+
+        .nomore p {
+            font-size: 1.3vw;
+            text-align: center;
+
+        }
+
+        .foxyroks {
+            position: relative;
+            display: flex;
+            margin: 3.5vw 2vw;
+            justify-content: center;
+            gap: 5vw;
+            align-items: center;
+
+        }
+
+        .foxyroks p {
+            font-size: 1.3vw;
+            text-align: center;
+        }
+
+        .foxyroks img {
+            height: 10vw;
+            border: 0.25vw solid black;
+            padding: 0.2vw;
+        }
+
+        .links {
+            position: relative;
+            text-align: center;
+            font-size: 1.4vw;
+            margin: 2vw 0 5vw 0;
+        }
+
+        #lilandyachtz a {
+            color: #ffffff;
+            padding: 0.9vw 1.2vw;
+            text-decoration: none;
+            border-radius: 2vw;
+            background: linear-gradient(to right, #bf1e2e 50%, #ffffff 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+
+        }
+
+        #lilandyachtz a:hover {
+            background-position: -100% 0;
+            color: #bf1e2e;
+            border: 3px solid #bf1e2e;
+
+        }
+
+
+        #linomore a {
+            color: #f7f9f8;
+            padding: 0.9vw 1.2vw;
+            text-decoration: none;
+            border-radius: 2vw;
+            background: linear-gradient(to right, #1c1c1c 50%, #f7f9f8 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+
+        }
+
+        #linomore a:hover {
+            background-position: -100% 0;
+            color: #1c1c1c;
+            border: 3px solid #1c1c1c;
+        }
+
+        #lifoxy a {
+            color: #3c383d;
+            padding: 0.9vw 1.2vw;
+            text-decoration: none;
+            background-color: #ea1e7d;
+            border-radius: 2vw;
+            background: linear-gradient(to right, #ea1e7d 50%, #3c383d 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        #lifoxy a:hover {
+            background-position: -100% 0;
+            color: #ea1e7d;
+            border: 3px solid #ea1e7d;
+        }
+
+        .footer {
+            position: relative;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.7vw 0;
+            margin: 7vw 0 0 0;
+
+        }
+
+        .footer img {
+            align-items: center;
+        }
+
+        .social {
+            position: relative;
+            display: flex;
+            gap: 0.5vw;
+            align-items: center;
+        }
+
+        .social img {
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+
+        .social a {
+            position: relative;
+            color: white;
+            font-size: 1.8w;
+            align-items: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logob.png" alt="">
+        </div>
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collabs.html">Collabs</a></li>
+            <li><a href="skateacrossindia.html">Skate Across India</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="origins.html">Origin</a></li>
+        </nav>
+        <div class="fuel">
+            Fuel My Adventures
+        </div>
+    </div>
+    <div class="collabs">
+        <div class="landyachtz">
+            <img src="landyachtzpro.jpg" alt="">
+            <h1>Landyachtz</h1>
+            <p>Landyachtz is known as one of the best cruiser board manufacturer in the world, and I can see why! Based
+                in
+                Canada, they truly excel in creating top-quality skateboards that perform like a dream.
+
+                I want to give a big shoutout to Alex and the entire Landyachtz team for their incredible generosity.
+                They sent me three fantastic boards—all the way from Canada—two ATV Perfecto models and one Classic
+                Dinghy, along with extra wheels, bearings, and some cool t-shirts! They’ve also been kind enough to
+                share my story and give me shoutouts on their social media platforms, helping me reach a wider audience.
+
+
+                I’m proud to say I’m now one of their brand ambassadors. If you’re looking for high-quality gear that
+                stands out, I highly recommend checking out Landyachtz. You can even get 10% off your next purchase
+                using this link.
+            </p>
+        </div>
+        <div class="links" id="lilandyachtz"><a href="">ritikkratzel10</a></div>
+1
+        <div class="title">
+            <h1> No More </h1>
+        </div>
+        <div class="nomore">
+            <img src="nomorepro.jpg" alt="">
+            <p>As someone who is environmentally conscious and promotes a lower carbon footprint through long-distance
+                skateboarding, I truly resonate with the mission of No More. This incredible zero-waste brand creates
+                all of their bags and accessories using reclaimed materials, demonstrating a commitment to
+                sustainability that aligns perfectly with my values.
+
+                They recently sent me one of their unique bags, and I absolutely love it! Each product is crafted to be
+                one-of-a-kind, ensuring that your purchase is not just stylish but also beneficial for the planet.
+
+                I’m excited for future collaborations, including the possibility of creating a skate bag together!</p>
+        </div>
+        <div class="links" id="linomore"><a href="https://nomoreofmore.com">No More</a></div>
+        <div class="title">
+            <h1> Foxyroks </h1>
+        </div>
+        <div class="foxyroks">
+            <p>The man behind the art at Foxyroks has also become a personal friend. Based in UK, he goes out of his way
+                to support me and is actively trying to find sponsors for my future trips. His creations are truly a
+                form of art; whether it’s jewelry, lamps, knives, or clocks, everything is made from recycled
+                skateboards, showcasing both creativity and sustainability.
+
+                Each piece not only tells a story but also reflects a commitment to reducing waste and celebrating the
+                skateboarding culture we love. I’m continually inspired by the craftsmanship and ingenuity that goes
+                into every item.
+
+                Mate, I truly appreciate your support!</p>
+            <img src="foxyrokspro.jpg" alt="">
+        </div>
+        <div class="links" id="lifoxy"><a href="https://www.foxyroks.com">Foxyroks</a></div>
+
+    </div>
+
+    <div class="footer">
+        <div class="social">
+            <a href="">Youtube </a>
+            <img src="youtube.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Instagram </a>
+            <img src="instagram.png" alt="">
+        </div>
+        <div class="social">
+            <a href="">Facebook </a>
+            <img src="facebook.png" alt="">
+        </div>
+
+    </div>
+</body>
+
+</html>
